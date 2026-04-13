@@ -1,0 +1,224 @@
+.footer {
+  background-color: var(--color-footer-bg);
+  color: var(--color-footer-text);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Parallax inner wrapper */
+.parallaxBg {
+  position: absolute;
+  inset: -60px 0;
+  background: linear-gradient(
+    160deg,
+    rgba(200, 130, 58, 0.08) 0%,
+    transparent 50%,
+    rgba(200, 130, 58, 0.04) 100%
+  );
+  pointer-events: none;
+  will-change: transform;
+}
+
+.inner {
+  position: relative;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-3xl) var(--space-xl);
+  display: grid;
+  grid-template-columns: 1fr 1fr 120px 1fr;
+  gap: var(--space-2xl);
+  align-items: start;
+}
+
+/* Col 1: Brand */
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.logoWrap {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  text-decoration: none;
+}
+
+.logoImage {
+  width: 52px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 2px;
+  filter: brightness(0.95);
+}
+
+.logoText {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-footer-text);
+  line-height: 1.35;
+}
+
+.contactList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.contactItem {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.5;
+}
+
+.contactLink {
+  color: rgba(255,255,255,0.75);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color var(--transition-fast);
+}
+
+.contactLink:hover {
+  color: var(--color-gold-light);
+}
+
+/* Col 2: Quicklinks */
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.sectionTitle {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--color-footer-text);
+  text-transform: uppercase;
+}
+
+.quickLinks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xs) var(--space-md);
+}
+
+.quickLink {
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  color: rgba(255,255,255,0.6);
+  text-transform: uppercase;
+  transition: color var(--transition-fast);
+  padding: 2px 0;
+}
+
+.quickLink:hover {
+  color: var(--color-gold-light);
+}
+
+/* Col 3: Connect */
+.socialList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  color: rgba(255,255,255,0.75);
+  transition: color var(--transition-fast);
+}
+
+.socialLink:hover {
+  color: var(--color-gold-light);
+}
+
+.facebookIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+}
+
+.archdioceseBadge {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-top: var(--space-md);
+  opacity: 0.9;
+  border-radius: var(--radius-sm);
+}
+
+/* Col 4: Donate CTA */
+.donateCol {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.donateHeading {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: var(--color-footer-text);
+}
+
+.donateSubtext {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.7);
+}
+
+.donateBtn {
+  display: inline-block;
+  align-self: flex-start;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--color-dark);
+  background: var(--color-peach);
+  padding: 0.75rem 2rem;
+  border-radius: var(--radius-full);
+  transition: background var(--transition-fast), transform var(--transition-fast);
+  text-transform: uppercase;
+}
+
+.donateBtn:hover {
+  background: var(--color-gold);
+  color: var(--color-white);
+  transform: translateY(-2px);
+}
+
+/* Bottom bar */
+.bottomBar {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: var(--space-md) var(--space-xl);
+  text-align: center;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.35);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .inner {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-2xl) var(--space-xl);
+  }
+}
+
+@media (max-width: 640px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .quickLinks {
+    grid-template-columns: 1fr 1fr;
+  }
+}
