@@ -36,7 +36,7 @@ export default function Welcome() {
           <div className={styles.priestRow}>
             <p className={styles.priestName}>{churchInfo.priest}</p>
             <Image
-              src="/images/priest.jpg"
+              src="/images/priest-2.jpg"
               alt={`${churchInfo.priest}, parish priest`}
               width={80}
               height={80}

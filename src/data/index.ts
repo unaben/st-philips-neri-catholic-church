@@ -118,7 +118,7 @@ export const socialLinks: SocialLink[] = [
 ];
 
 export const churchInfo = {
-  name: 'St. Philip Neri Catholic Church',
+  name: 'St. Philip Neri Catholic Church Smethwick',
   phone: '0121 558 1065',
   email: 'stphilip.smethwick@rcaob.org.uk',
   address: 'Messenger Road, Smethwick, Birmingham B66 3DU',
