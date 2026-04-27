@@ -20,7 +20,6 @@ export default function HeroCarousel() {
       onMouseEnter={pause}
       onMouseLeave={resume}
     >
-      {/* Slides */}
       {heroSlides.map((slide, i) => (
         <div
           key={slide.id}
@@ -37,11 +36,7 @@ export default function HeroCarousel() {
           />
         </div>
       ))}
-
-      {/* Dark overlay */}
       <div className={styles.overlay} aria-hidden="true" />
-
-      {/* Text content – shows current slide's text */}
       <div className={styles.content}>
         <div className={styles.textWrap}>
           <p className={styles.tagline}>{heroSlides[current].tagline}</p>
@@ -51,8 +46,6 @@ export default function HeroCarousel() {
           </Link>
         </div>
       </div>
-
-      {/* Arrows */}
       <button
         className={cn(styles.arrowBtn, styles.arrowLeft)}
         onClick={prev}
@@ -67,8 +60,6 @@ export default function HeroCarousel() {
       >
         ›
       </button>
-
-      {/* Dots */}
       <div className={styles.dots} role="tablist" aria-label="Carousel navigation">
         {heroSlides.map((_, i) => (
           <button

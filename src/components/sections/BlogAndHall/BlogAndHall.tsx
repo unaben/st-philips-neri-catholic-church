@@ -15,7 +15,6 @@ export default function BlogAndHall() {
   return (
     <section className={styles.section} aria-label="Latest blog and parish hall">
       <div className={styles.inner}>
-        {/* Left – Latest blog post */}
         <article
           className={cn(styles.blogPost, blogVisible && styles.visible)}
           ref={blogRef as React.RefObject<HTMLElement>}
@@ -36,8 +35,6 @@ export default function BlogAndHall() {
             Read more
           </Link>
         </article>
-
-        {/* Right – Parish Hall card */}
         <div
           className={cn(styles.hallCard, hallVisible && styles.visible)}
           ref={hallRef as React.RefObject<HTMLDivElement>}

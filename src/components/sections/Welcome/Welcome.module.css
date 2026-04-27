@@ -12,7 +12,6 @@
   align-items: start;
 }
 
-/* Left col */
 .heading {
   font-family: var(--font-display);
   font-size: clamp(2rem, 4vw, 3rem);
@@ -64,7 +63,6 @@
   border: 3px solid var(--color-peach);
 }
 
-/* Right col – what to do next */
 .nextCard {
   background: var(--color-white);
   border-radius: var(--radius-lg);
@@ -124,7 +122,6 @@
   text-transform: uppercase;
 }
 
-/* Animate on scroll */
 .animatable {
   opacity: 0;
   transform: translateY(24px);

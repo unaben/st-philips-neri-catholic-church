@@ -34,17 +34,16 @@
   flex-direction: column;
   gap: var(--space-md);
   box-shadow: var(--shadow-sm);
-  transition: box-shadow var(--transition-base), transform var(--transition-base), border-color var(--transition-base);
+  transition: box-shadow var(--transition-base),
+    transform var(--transition-base), border-color var(--transition-base);
   text-decoration: none;
   color: inherit;
 
-  /* staggered fade-in handled via CSS var */
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.5s ease var(--delay, 0s),
-              transform 0.5s ease var(--delay, 0s),
-              box-shadow 0.25s ease,
-              border-color 0.25s ease;
+    transform 0.5s ease var(--delay, 0s), box-shadow 0.25s ease,
+    border-color 0.25s ease;
 }
 
 .card.visible {
@@ -88,9 +87,13 @@
 }
 
 @media (max-width: 900px) {
-  .grid { grid-template-columns: repeat(2, 1fr); }
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 540px) {
-  .grid { grid-template-columns: 1fr; }
+  .grid {
+    grid-template-columns: 1fr;
+  }
 }

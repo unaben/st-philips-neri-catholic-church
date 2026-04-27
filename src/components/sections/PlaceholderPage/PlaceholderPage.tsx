@@ -13,7 +13,6 @@ export default async function PlaceholderPage({
 
   return (
     <>
-      {/* ── Hero banner ─────────────────────────────────────── */}
       <section className={styles.hero} aria-label={`${title} hero`}>
         <Image
           src="/images/church-img.jpg"
@@ -25,7 +24,6 @@ export default async function PlaceholderPage({
         <div className={styles.heroOverlay} aria-hidden="true" />
 
         <div className={styles.heroContent}>
-          {/* Breadcrumb */}
           <nav className={styles.breadcrumb} aria-label="Breadcrumb">
             <Link href="/" className={styles.breadcrumbHome}>
               Home
@@ -41,28 +39,20 @@ export default async function PlaceholderPage({
           <h1 className={styles.heroTitle}>{title}</h1>
         </div>
       </section>
-
-      {/* Gold accent bar */}
       <div className={styles.accentBar} aria-hidden="true" />
 
-      {/* ── Page body ────────────────────────────────────────── */}
       <div className={styles.body}>
         <div className={styles.bodyInner}>
-          {/* "Coming soon" badge */}
           <span className={styles.badge}>
             <span className={styles.badgeDot} aria-hidden="true" />
             Page coming soon
           </span>
-
-          {/* Title + underline */}
           <div>
             <h2 className={styles.title}>
               {title}
               <span className={styles.titleUnderline} aria-hidden="true" />
             </h2>
           </div>
-
-          {/* Placeholder description */}
           <p className={styles.description}>
             We are currently working on this page and it will be available very
             soon. The {title} section will provide you with all the information
@@ -76,8 +66,6 @@ export default async function PlaceholderPage({
           </p>
 
           <div className={styles.divider} />
-
-          {/* Quick info strip */}
           <div
             className={styles.infoStrip}
             role="complementary"
@@ -116,8 +104,6 @@ export default async function PlaceholderPage({
               <span className={styles.infoValue}>9:00am &amp; 11:00am</span>
             </div>
           </div>
-
-          {/* CTAs */}
           <div className={styles.ctaGroup}>
             <Link href="/" className={styles.btnPrimary}>
               ← Back to Home

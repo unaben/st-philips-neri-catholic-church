@@ -12,7 +12,6 @@
   align-items: start;
 }
 
-/* ── Blog post (left) ──────────────────────────────────────── */
 .blogPost {
   display: flex;
   flex-direction: column;
@@ -64,7 +63,6 @@
   color: var(--color-gold);
 }
 
-/* ── Parish hall card (right) ─────────────────────────────── */
 .hallCard {
   background: var(--color-white);
   border-radius: var(--radius-lg);

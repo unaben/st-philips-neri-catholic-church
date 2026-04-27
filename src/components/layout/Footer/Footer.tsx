@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import Image from 'next/image';
-import { useParallax } from '@/hooks/useParallax';
-import { churchInfo, footerQuickLinks, socialLinks } from '@/data';
-import styles from './Footer.module.css';
+import Link from "next/link";
+import Image from "next/image";
+import { useParallax } from "@/hooks/useParallax";
+import { churchInfo, footerQuickLinks, socialLinks } from "@/data";
+import styles from "./Footer.module.css";
 
 export default function Footer() {
   const { ref, offset } = useParallax({ speed: 0.3 });
@@ -15,7 +15,6 @@ export default function Footer() {
       ref={ref as React.RefObject<HTMLElement>}
       aria-label="Site footer"
     >
-      {/* Parallax decorative background */}
       <div
         className={styles.parallaxBg}
         aria-hidden="true"
@@ -23,7 +22,6 @@ export default function Footer() {
       />
 
       <div className={styles.inner}>
-        {/* Col 1 – Brand & contact */}
         <div className={styles.brand}>
           <Link href="/" className={styles.logoWrap} aria-label="Home">
             <Image
@@ -34,18 +32,31 @@ export default function Footer() {
               className={styles.logoImage}
             />
             <span className={styles.logoText}>
-              St. Philip Neri<br />Catholic<br />Church
+              St. Philip Neri
+              <br />
+              Catholic
+              <br />
+              Church
             </span>
           </Link>
 
-          <address className={styles.contactList} style={{ fontStyle: 'normal' }}>
+          <address
+            className={styles.contactList}
+            style={{ fontStyle: "normal" }}
+          >
             <span className={styles.contactItem}>
-              <a href={`tel:${churchInfo.phone}`} className={styles.contactLink}>
+              <a
+                href={`tel:${churchInfo.phone}`}
+                className={styles.contactLink}
+              >
                 {churchInfo.phone}
               </a>
             </span>
             <span className={styles.contactItem}>
-              <a href={`mailto:${churchInfo.email}`} className={styles.contactLink}>
+              <a
+                href={`mailto:${churchInfo.email}`}
+                className={styles.contactLink}
+              >
                 {churchInfo.email}
               </a>
             </span>
@@ -53,7 +64,6 @@ export default function Footer() {
           </address>
         </div>
 
-        {/* Col 2 – Quicklinks */}
         <div className={styles.section}>
           <h3 className={styles.sectionTitle}>Quicklinks</h3>
           <nav aria-label="Footer quicklinks">
@@ -69,7 +79,6 @@ export default function Footer() {
           </nav>
         </div>
 
-        {/* Col 3 – Connect */}
         <div className={styles.section}>
           <h3 className={styles.sectionTitle}>Connect</h3>
           <ul className={styles.socialList}>
@@ -82,7 +91,6 @@ export default function Footer() {
                   className={styles.socialLink}
                   aria-label={social.ariaLabel}
                 >
-                  {/* Facebook SVG icon */}
                   <svg
                     width="32"
                     height="32"
@@ -103,7 +111,6 @@ export default function Footer() {
             ))}
           </ul>
 
-          {/* Archdiocese badge */}
           <Image
             src="/images/archdiocese-badge.png"
             alt="Archdiocese of Birmingham"
@@ -113,7 +120,6 @@ export default function Footer() {
           />
         </div>
 
-        {/* Col 4 – Donate CTA */}
         <div className={styles.donateCol}>
           <p className={styles.donateHeading}>
             PLEASE HELP WITH THE UPKEEP OF THE CHURCH
@@ -121,7 +127,13 @@ export default function Footer() {
           <p className={styles.donateSubtext}>
             We are always very grateful for donations
           </p>
-          <Link href="/donate" className={styles.donateBtn} aria-label="Donate to the church">
+          <Link
+            target="_blank"
+            rel="noopener noreferrer"
+            href={process.env.PARISH_DONA_URL ?? ""}
+            className={styles.donateBtn}
+            aria-label="Donate to the church"
+          >
             DONATE
           </Link>
         </div>
@@ -129,8 +141,8 @@ export default function Footer() {
 
       <div className={styles.bottomBar}>
         <p>
-          &copy; {new Date().getFullYear()} St. Philip Neri Catholic Church, Smethwick.
-          All rights reserved.
+          &copy; {new Date().getFullYear()} St. Philip Neri Catholic Church,
+          Smethwick. All rights reserved.
         </p>
       </div>
     </footer>
