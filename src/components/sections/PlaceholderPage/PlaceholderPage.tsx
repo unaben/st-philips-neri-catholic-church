@@ -15,7 +15,7 @@ export default async function PlaceholderPage({
     <>
       <section className={styles.hero} aria-label={`${title} hero`}>
         <Image
-          src="/images/church-img.jpg"
+          src="/images/parish-alter.webp"
           alt={`${title} — St. Philip Neri Catholic Church`}
           fill
           priority

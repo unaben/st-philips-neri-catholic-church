@@ -20,8 +20,8 @@ export const navLinks: NavLink[] = [
       { label: "Blog", href: "/blog" },
       { label: "Announcements", href: "/announcements" },
       { label: "Mass Booking", href: "/mass-booking" },
-      { label: "Safe guarding", href: "/safe-guarding" },
-      { label: "News & events", href: "/news-events" },
+      { label: "Safe Guarding", href: "/safe-guarding" },
+      { label: "News & Events", href: "/news-events" },
       { label: "RCIA", href: "/become-a-catholic" },
       { label: "How do I register in the Parish?", href: "/registration" },
     ],
@@ -33,7 +33,7 @@ export const navLinks: NavLink[] = [
 export const heroSlides: HeroSlide[] = [
   {
     id: 1,
-    src: "/images/church-img-2.jpg",
+    src: "/images/parish-view.webp",
     alt: "Mass celebration at St. Philip Neri Catholic Church",
     tagline: "WE WELCOME YOU TO",
     heading: "FOLLOW CHRIST IN LOVE AND WITH A JOYFUL HEART",
@@ -42,7 +42,7 @@ export const heroSlides: HeroSlide[] = [
   },
   {
     id: 2,
-    src: "/images/church-img.jpg",
+    src: "/images/parish-alter.webp",
     alt: "Interior of St. Philip Neri Catholic Church",
     tagline: "COME AND WORSHIP WITH US",
     heading: "A COMMUNITY UNITED IN FAITH AND LOVE",
