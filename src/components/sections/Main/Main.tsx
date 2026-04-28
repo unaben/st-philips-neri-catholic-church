@@ -130,7 +130,7 @@ export default function MainSection(props: MainSectionProps) {
         <Link
           target="_blank"
           rel="noopener noreferrer"
-          href={process.env.PARISH_DONA_URL ?? ""}
+          href='https://donate.mydona.com/st-philip-neri-catholic-church'
           className={styles.btnPrimary}
         >
           Support our Parish

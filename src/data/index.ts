@@ -27,7 +27,7 @@ export const navLinks: NavLink[] = [
     ],
   },
   { label: "Contact Us", href: "/contact" },
-  { label: "Donate", href: process.env.PARISH_DONA_URL },
+  { label: "Donate", href: 'https://donate.mydona.com/st-philip-neri-catholic-church' },
 ];
 
 export const heroSlides: HeroSlide[] = [
