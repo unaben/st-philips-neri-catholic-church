@@ -130,13 +130,13 @@ export default function MainSection(props: MainSectionProps) {
         <Link
           target="_blank"
           rel="noopener noreferrer"
-          href='https://donate.mydona.com/st-philip-neri-catholic-church'
+          href="https://donate.mydona.com/st-philip-neri-catholic-church"
           className={styles.btnPrimary}
         >
           Support our Parish
         </Link>
         <Link href="/subscribe" className={styles.btnSecondary}>
-          Subscribe to Alerts
+          Get Parish Updates
         </Link>
       </div>
     </section>

@@ -1,0 +1,379 @@
+/* ── Form card ──────────────────────────────────────────────────────────── */
+.form {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+/* ── Section blocks ─────────────────────────────────────────────────────── */
+.section {
+  padding: var(--space-2xl);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.section:last-of-type {
+  border-bottom: none;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+.sectionIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--color-peach);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.sectionTitle {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+/* ── Grid layouts ───────────────────────────────────────────────────────── */
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+}
+
+.grid3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--space-lg);
+}
+
+.colSpan2 {
+  grid-column: span 2;
+}
+
+/* ── Field ──────────────────────────────────────────────────────────────── */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-charcoal);
+}
+
+.optional {
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  text-transform: none;
+  letter-spacing: 0;
+  margin-left: 4px;
+}
+
+.input,
+.select,
+.textarea {
+  font-family: var(--font-body);
+  font-size: 0.97rem;
+  color: var(--color-text);
+  background: var(--color-bg-light);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 0.7rem 1rem;
+  width: 100%;
+  transition: border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+  outline: none;
+  appearance: none;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: var(--color-text-muted);
+  opacity: 0.7;
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+  border-color: var(--color-gold);
+  box-shadow: 0 0 0 3px rgba(200, 130, 58, 0.12);
+  background: var(--color-white);
+}
+
+.input.hasError,
+.select.hasError,
+.textarea.hasError {
+  border-color: #e53e3e;
+  background: #fff5f5;
+}
+
+.input.hasError:focus,
+.select.hasError:focus,
+.textarea.hasError:focus {
+  box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.12);
+}
+
+.select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236b6b6b' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
+  cursor: pointer;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 110px;
+  line-height: 1.6;
+}
+
+.errorMsg {
+  font-size: 0.8rem;
+  color: #e53e3e;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.errorMsg::before {
+  content: "⚠";
+  font-size: 0.75rem;
+}
+
+/* ── Radio / Checkbox group ─────────────────────────────────────────────── */
+.radioGroup {
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.radioLabel {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--color-text);
+  cursor: pointer;
+  padding: 0.6rem 1.25rem;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-full);
+  transition: border-color var(--transition-fast),
+    background var(--transition-fast);
+  user-select: none;
+}
+
+.radioLabel:hover {
+  border-color: var(--color-gold-light);
+  background: var(--color-peach-light);
+}
+
+.radioLabel.checked {
+  border-color: var(--color-gold);
+  background: var(--color-peach);
+  font-weight: 700;
+}
+
+.radioInput {
+  accent-color: var(--color-gold);
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+/* ── Progress bar ───────────────────────────────────────────────────────── */
+.progress {
+  height: 4px;
+  background: var(--color-border);
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.progressBar {
+  height: 100%;
+  background: linear-gradient(to right, var(--color-peach), var(--color-gold));
+  border-radius: 0;
+  transition: width 0.4s ease;
+}
+
+/* ── Footer / submit area ───────────────────────────────────────────────── */
+.formFooter {
+  padding: var(--space-xl) var(--space-2xl);
+  background: var(--color-bg);
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-lg);
+  flex-wrap: wrap;
+}
+
+.footerNote {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  max-width: 340px;
+  line-height: 1.5;
+}
+
+.submitBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-white);
+  background: var(--color-gold);
+  padding: 0.85rem 2.5rem;
+  border-radius: var(--radius-full);
+  border: none;
+  cursor: pointer;
+  transition: background var(--transition-fast),
+    transform var(--transition-fast);
+  white-space: nowrap;
+}
+
+.submitBtn:hover {
+  background: var(--color-gold-hover);
+  transform: translateY(-2px);
+}
+
+.submitBtn:active {
+  transform: translateY(0);
+}
+
+/* ── Success state ──────────────────────────────────────────────────────── */
+.success {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: var(--space-4xl) var(--space-2xl);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.successIcon {
+  font-size: 3.5rem;
+  line-height: 1;
+}
+
+.successTitle {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-dark);
+}
+
+.successText {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  max-width: 460px;
+}
+
+.successBtns {
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: var(--space-sm);
+}
+
+.btnHome {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-family: var(--font-display);
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-white);
+  background: var(--color-gold);
+  padding: 0.8rem 2rem;
+  border-radius: var(--radius-full);
+  transition: background var(--transition-fast);
+  text-decoration: none;
+}
+
+.btnHome:hover {
+  background: var(--color-gold-hover);
+}
+
+.btnReset {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-family: var(--font-display);
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-charcoal);
+  background: transparent;
+  padding: 0.8rem 2rem;
+  border-radius: var(--radius-full);
+  border: 2px solid var(--color-border);
+  cursor: pointer;
+  transition: border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.btnReset:hover {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+}
+
+/* ── Responsive ─────────────────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .page {
+    padding: var(--space-2xl) var(--space-md);
+  }
+
+  .section {
+    padding: var(--space-lg);
+  }
+
+  .grid2,
+  .grid3 {
+    grid-template-columns: 1fr;
+  }
+
+  .colSpan2 {
+    grid-column: span 1;
+  }
+
+  .formFooter {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .submitBtn {
+    width: 100%;
+    justify-content: center;
+  }
+}

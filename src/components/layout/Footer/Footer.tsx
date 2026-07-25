@@ -127,9 +127,7 @@ export default function Footer() {
           <p className={styles.donateSubtext}>
             We are always very grateful for donations
           </p>
-          <Link
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link            
             href='https://donate.mydona.com/st-philip-neri-catholic-church'
             className={styles.donateBtn}
             aria-label="Donate to the church"

@@ -97,8 +97,6 @@ export default function Navbar() {
             )}
             {donateLink && (
               <Link
-                target="_blank"
-                rel="noopener noreferrer"
                 href={donateLink.href ?? ""}
                 className={styles.donateBtn}
               >
@@ -148,8 +146,6 @@ export default function Navbar() {
         )}
         {donateLink && (
           <Link
-            target="_blank"
-            rel="noopener noreferrer"
             href={donateLink.href ?? ""}
             className={styles.mobileDonateBtn}
           >

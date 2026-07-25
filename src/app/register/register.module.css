@@ -1,0 +1,52 @@
+
+/* ── Page wrapper ───────────────────────────────────────────────────────── */
+.page {
+    background-color: var(--color-bg);
+    min-height: 100vh;
+    padding: var(--space-2xl) var(--space-xl) var(--space-4xl);
+  }
+   
+  .inner {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+   
+  /* ── Page header ────────────────────────────────────────────────────────── */
+  .header {
+    text-align: center;
+    margin-bottom: var(--space-3xl);
+  }
+   
+  .eyebrow {
+    display: inline-block;
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-gold);
+    background: var(--color-peach);
+    padding: 0.3rem 1rem;
+    border-radius: var(--radius-full);
+    margin-bottom: var(--space-md);
+  }
+   
+  .heading {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--color-dark);
+    line-height: 1.15;
+    margin-bottom: var(--space-md);
+  }
+   
+  .subheading {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    max-width: 520px;
+    margin: 0 auto;
+  }
