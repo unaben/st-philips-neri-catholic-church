@@ -4,6 +4,7 @@
   box-shadow: var(--shadow-sm);
   border: 1px solid var(--color-border);
   overflow: hidden;
+  width: 100%;
 }
 
 .inner {
@@ -101,6 +102,11 @@
     padding: var(--space-lg) var(--space-lg);
   }
 
+  .heading {
+    max-width: 100%;
+    margin: auto;
+  }
+
   .inner {
     flex-direction: column;
     align-items: flex-start;
@@ -121,7 +127,6 @@
 
   .heading {
     font-size: 1rem;
-    max-width: 100%;
   }
 
   .input {
