@@ -15,6 +15,7 @@ export default function NewPage() {
       <Hero title="Contact us" />
       <div className={styles.accentBar} aria-hidden="true" />
       <div className={styles.body}>
+        <div className={styles.rainbowBar} />
         <ContactPage />
       </div>
     </>

@@ -1,10 +1,8 @@
 import Link from "next/link";
-import cn from "classnames";
 import { slugToTitle } from "./utils/slugToTitle";
 import Subscribe from "../Subscribe/Subscribe";
 import Hero from "@/components/Hero/Hero";
 import styles from "./PlaceholderPage.module.css";
-
 
 const PAGE_CONTENT: Record<string, React.ReactNode> = {
   subscribe: <Subscribe />,
@@ -46,21 +44,16 @@ export default async function PlaceholderPage({
 }) {
   const { slug } = await params;
   const title = slugToTitle(slug);
-  const isInContent = slug in PAGE_CONTENT;
 
   return (
     <>
       <Hero title={title} />
       <div className={styles.accentBar} aria-hidden="true" />
-
-      <div className={cn(!isInContent && styles.body)}>
-        <div
-          className={cn(styles.bodyInner, { [styles.padding]: isInContent })}
-        >
+      <div className={styles.body}>
+      <div className={styles.rainbowBar} />
+        <div className={styles.bodyInner}>
           {resolveContent(slug, title)}
-
           <div className={styles.divider} />
-
           <div
             className={styles.infoStrip}
             role="complementary"

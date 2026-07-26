@@ -1,5 +1,6 @@
 .page {
   background: var(--color-bg);
+  overflow-x: hidden;
 }
 
 .accentBar {
@@ -13,7 +14,6 @@
   );
 }
 
-
 .topSection {
   margin: 0 auto;
   padding: 0 var(--space-xl);
@@ -21,6 +21,7 @@
   grid-template-columns: 1.2fr 1fr;
   gap: var(--space-3xl);
   align-items: stretch;
+  min-width: 0;
 }
 
 .mapWrap {
@@ -29,6 +30,7 @@
   overflow: hidden;
   box-shadow: var(--shadow-sm);
   min-height: 100%;
+  min-width: 0;
 }
 
 .mapWrap iframe {
@@ -43,6 +45,7 @@
   display: flex;
   flex-direction: column;
   order: 2;
+  min-width: 0;
 }
 
 .infoList {
@@ -52,6 +55,7 @@
   border: 1px solid var(--color-border);
   overflow: hidden;
   box-shadow: var(--shadow-sm);
+  min-width: 0;
 }
 
 .infoRow {
@@ -63,6 +67,7 @@
   border-bottom: 1px solid var(--color-border);
   transition: background var(--transition-fast);
   flex: 1;
+  min-width: 0;
 }
 
 .infoRow:last-child {
@@ -88,6 +93,8 @@
   display: flex;
   flex-direction: column;
   gap: 2px;
+  min-width: 0;
+  flex: 1;
 }
 
 .infoLabel {
@@ -104,12 +111,15 @@
   font-weight: 600;
   color: var(--color-accent-mid);
   line-height: 1.4;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .formSection {
   width: 100%;
   padding: var(--space-3xl) var(--space-xl);
   display: flex;
+  min-width: 0;
 }
 
 .formCol {
@@ -118,6 +128,7 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-xl);
+  min-width: 0;
 }
 
 .formHeading {
@@ -146,13 +157,14 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-lg);
+  min-width: 0;
 }
-
 
 .field {
   display: flex;
   flex-direction: column;
   gap: 6px;
+  min-width: 0;
 }
 
 .label {
@@ -182,7 +194,9 @@
   border: 1.5px solid var(--color-border);
   padding: 0.75rem 1rem;
   width: 100%;
+  max-width: 100%;
   outline: none;
+  box-sizing: border-box;
   transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
 }
 
@@ -329,7 +343,6 @@
   .topSection {
     grid-template-columns: 1fr;
     gap: var(--space-xl);
-    padding-top: var(--space-2xl);
   }
 
   .mapWrap iframe {
@@ -350,5 +363,61 @@
 
   .infoRow {
     padding: var(--space-md) var(--space-lg);
+  }
+}
+
+@media (max-width: 450px) {
+  .topSection,
+  .formSection {
+    padding-left: var(--space-sm);
+    padding-right: var(--space-sm);
+  }
+
+  .topSection {
+    gap: var(--space-lg);
+  }
+
+  .mapWrap iframe {
+    min-height: 220px;
+  }
+
+  .infoRow {
+    padding: var(--space-sm) var(--space-md);
+    gap: var(--space-md);
+  }
+
+  .infoIconWrap {
+    width: 34px;
+    height: 34px;
+    font-size: 1rem;
+  }
+
+  .infoLabel {
+    font-size: 0.62rem;
+  }
+
+  .infoValue {
+    font-size: 0.88rem;
+  }
+
+  .form {
+    padding: var(--space-md);
+    gap: var(--space-md);
+  }
+
+  .formSection {
+    padding-top: var(--space-xl);
+    padding-bottom: var(--space-xl);
+  }
+
+  .input,
+  .textarea {
+    font-size: 0.9rem;
+    padding: 0.65rem 0.85rem;
+  }
+
+  .submitBtn {
+    font-size: 0.9rem;
+    padding: 0.85rem 1.5rem;
   }
 }
