@@ -3,6 +3,7 @@
   padding: var(--space-xl) var(--space-xl);
   box-shadow: var(--shadow-sm);
   border: 1px solid var(--color-border);
+  overflow: hidden;
 }
 
 .inner {
@@ -12,6 +13,7 @@
   align-items: center;
   justify-content: space-between;
   gap: var(--space-2xl);
+  min-width: 0;
 }
 
 .heading {
@@ -32,10 +34,12 @@
   overflow: hidden;
   flex: 1;
   max-width: 500px;
+  min-width: 0;
 }
 
 .input {
   flex: 1;
+  min-width: 0;
   padding: 0.75rem 1.25rem;
   font-family: var(--font-body);
   font-size: 0.95rem;
@@ -62,6 +66,7 @@
   cursor: pointer;
   transition: background var(--transition-fast), color var(--transition-fast);
   white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .button:hover {
@@ -93,6 +98,7 @@
 @media (max-width: 768px) {
   .section {
     margin: 0 var(--space-md);
+    padding: var(--space-lg) var(--space-lg);
   }
 
   .inner {
@@ -104,5 +110,27 @@
   .form {
     width: 100%;
     max-width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  .section {
+    margin: 0 var(--space-sm);
+    padding: var(--space-md);
+  }
+
+  .heading {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  .input {
+    padding: 0.65rem 0.85rem;
+    font-size: 0.88rem;
+  }
+
+  .button {
+    padding: 0.65rem 0.85rem;
+    font-size: 0.68rem;
   }
 }
