@@ -27,7 +27,6 @@
 
 .card {
   background: var(--color-card-bg);
-  border-radius: var(--radius-lg);
   padding: var(--space-xl);
   border-bottom: 3px solid var(--color-peach);
   display: flex;
@@ -38,7 +37,6 @@
     transform var(--transition-base), border-color var(--transition-base);
   text-decoration: none;
   color: inherit;
-
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.5s ease var(--delay, 0s),

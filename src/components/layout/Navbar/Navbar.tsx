@@ -1,93 +1,93 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
-import { usePathname } from "next/navigation";
-import { navLinks } from "@/data";
-import { cn } from "@/utils";
+import cn from "classnames";
+import { navLinks, donateLink } from "@/data";
+import { ChurchCrest } from "@/components/Icons/ChurchCrest";
+import useNavbar from "./hooks/useNavbar";
 import styles from "./Navbar.module.css";
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
-  const pathname = usePathname();
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    setMenuOpen(false);
-  }, [pathname]);
-
-  const regularLinks = navLinks.filter((l) => l.label !== "Donate");
-  const donateLink = navLinks.find((l) => l.label === "Donate");
+  const {
+    scrolled,
+    menuOpen,
+    setMenuOpen,
+    openDropdown,
+    toggleDropdown,
+    closeDropdown,
+    pathname,
+  } = useNavbar();
 
   return (
     <>
       <header
-        className={cn(styles.navbar, scrolled && styles.scrolled)}
+        className={cn(styles.navbar, { [styles.scrolled]: scrolled })}
         role="banner"
       >
         <div className={styles.inner}>
           <Link
             href="/"
             className={styles.logo}
-            aria-label="St. Philip Neri Catholic Church – Home"
+            aria-label="St. Philip Neri Catholic Church — Home"
           >
-            <Image
-              src="/images/logo.png"
-              alt="St. Philip Neri Catholic Church logo"
-              width={56}
-              height={68}
-              className={styles.logoImage}
-              priority
-            />
+            <div className={styles.logoCrest} aria-hidden="true">
+              <ChurchCrest position="nav" />
+            </div>
             <span className={styles.logoText}>
-              St. Philip Neri <br /> Catholic Church <br /> Smethwick
+              St. Philip Neri
+              <br />
+              Catholic
+              <br />
+              Church
             </span>
           </Link>
           <nav className={styles.nav} aria-label="Main navigation">
-            {regularLinks.map((link) =>
+            {navLinks.map((link) =>
               link.children ? (
-                <div key={link.label} className={styles.navItem}>
+                <div key={link.label} className={styles.navItem} data-nav-item>
                   <button
-                    className={styles.navLink}
+                    className={cn(styles.navLink, {
+                      [styles.navLinkActive]: openDropdown === link.label,
+                    })}
                     aria-haspopup="true"
-                    aria-expanded="false"
+                    aria-expanded={openDropdown === link.label}
                     aria-label={`${link.label} submenu`}
+                    onClick={() => toggleDropdown(link.label)}
                   >
                     {link.label}
-                    <span className={styles.chevron} aria-hidden="true">
+                    <span
+                      className={cn(styles.chevron, {
+                        [styles.chevronOpen]: openDropdown === link.label,
+                      })}
+                      aria-hidden="true"
+                    >
                       ▾
                     </span>
                   </button>
-                  <ul className={styles.dropdown} role="menu">
-                    {link.children.map((child) => (
-                      <li key={child.href} role="none">
-                        <Link
-                          href={child.href}
-                          className={styles.dropdownLink}
-                          role="menuitem"
-                        >
-                          {child.label}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
+                  {openDropdown === link.label && (
+                    <ul className={styles.dropdown} role="menu">
+                      {link.children.map((child) => (
+                        <li key={child.href} role="none">
+                          <Link
+                            href={child.href}
+                            className={styles.dropdownLink}
+                            role="menuitem"
+                            onClick={closeDropdown}
+                          >
+                            {child.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
               ) : (
                 <div key={link.label} className={styles.navItem}>
                   <Link
                     href={link.href}
-                    className={cn(
-                      styles.navLink,
-                      pathname === link.href && styles.active
-                    )}
+                    className={cn(styles.navLink, {
+                      [styles.active]: pathname === link.href,
+                    })}
                     aria-current={pathname === link.href ? "page" : undefined}
                   >
                     {link.label}
@@ -96,16 +96,13 @@ export default function Navbar() {
               )
             )}
             {donateLink && (
-              <Link
-                href={donateLink.href ?? ""}
-                className={styles.donateBtn}
-              >
+              <Link href={donateLink.href} className={styles.donateBtn}>
                 Donate
               </Link>
             )}
           </nav>
           <button
-            className={cn(styles.hamburger, menuOpen && styles.open)}
+            className={cn(styles.hamburger, { [styles.open]: menuOpen })}
             aria-label={menuOpen ? "Close menu" : "Open menu"}
             aria-expanded={menuOpen}
             aria-controls="mobile-menu"
@@ -119,11 +116,11 @@ export default function Navbar() {
       </header>
       <nav
         id="mobile-menu"
-        className={cn(styles.mobileMenu, menuOpen && styles.open)}
+        className={cn(styles.mobileMenu, { [styles.open]: menuOpen })}
         aria-label="Mobile navigation"
         aria-hidden={!menuOpen}
       >
-        {regularLinks.map((link) =>
+        {navLinks.map((link) =>
           link.children ? (
             link.children.map((child) => (
               <Link
@@ -145,10 +142,7 @@ export default function Navbar() {
           )
         )}
         {donateLink && (
-          <Link
-            href={donateLink.href ?? ""}
-            className={styles.mobileDonateBtn}
-          >
+          <Link href={donateLink.href} className={styles.mobileDonateBtn}>
             DONATE
           </Link>
         )}

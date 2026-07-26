@@ -26,7 +26,7 @@ export default function Subscribe() {
     <div className={styles.section} aria-label="Newsletter subscription">
       <div className={styles.inner}>
         <h2 className={styles.heading}>
-          Subscribe to get the latest update and news
+          Stories of hope, straight to your inbox
         </h2>
 
         <form

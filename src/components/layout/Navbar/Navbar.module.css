@@ -4,19 +4,22 @@
   left: 0;
   right: 0;
   z-index: 100;
-  background-color: var(--color-bg-light);
-  border-bottom: 1px solid var(--color-border);
   height: var(--nav-height);
-  transition: box-shadow var(--transition-base);
+  background: transparent;
+  transition: background var(--transition-base),
+    box-shadow var(--transition-base);
 }
 
 .navbar.scrolled {
+  background: var(--color-white);
   box-shadow: var(--shadow-md);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .inner {
+  max-width: var(--max-width);
   margin: 0 auto;
-  padding: var(--space-lg) var(--space-xl);
+  padding: 0 var(--space-xl);
   height: 100%;
   display: flex;
   align-items: center;
@@ -26,30 +29,52 @@
 .logo {
   display: flex;
   align-items: center;
-  gap: var(--space-sm);
+  gap: var(--space-md);
   text-decoration: none;
   flex-shrink: 0;
 }
 
 .logoImage {
-  width: 56px;
-  height: 68px;
-  object-fit: cover;
-  border-radius: 2px;
+  width: 52px;
+  height: 64px;
+  object-fit: contain;
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.25));
+}
+
+.logoCrest {
+  width: 48px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.logoCrest svg {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.3));
 }
 
 .logoText {
   font-family: var(--font-serif);
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 600;
-  color: var(--color-dark);
   line-height: 1.3;
+  color: var(--color-white);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  transition: color var(--transition-base), text-shadow var(--transition-base);
+}
+
+.navbar.scrolled .logoText {
+  color: var(--color-dark);
+  text-shadow: none;
 }
 
 .nav {
   display: flex;
   align-items: center;
-  gap: var(--space-sm);
+  gap: var(--space-xs);
 }
 
 .navItem {
@@ -57,25 +82,48 @@
 }
 
 .navLink {
-  font-family: var(--font-body);
-  font-size: 0.95rem;
-  font-weight: 400;
-  color: var(--color-charcoal);
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   padding: var(--space-sm) var(--space-md);
-  border-radius: var(--radius-sm);
   transition: color var(--transition-fast);
   display: flex;
   align-items: center;
   gap: 4px;
   white-space: nowrap;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-family: var(--font-display);
 }
 
 .navLink:hover {
-  color: var(--color-gold);
+  color: var(--color-white);
 }
 
-.navLink.active {
-  color: var(--color-gold);
+.navbar.scrolled .navLink {
+  color: var(--color-charcoal);
+  text-shadow: none;
+}
+
+.navbar.scrolled .navLink:hover {
+  color: var(--color-accent);
+}
+
+.navbar.scrolled .navLink.active {
+  color: var(--color-accent);
+}
+
+.navLinkActive {
+  color: var(--color-white) !important;
+}
+
+.navbar.scrolled .navLinkActive {
+  color: var(--color-accent) !important;
 }
 
 .chevron {
@@ -83,68 +131,77 @@
   transition: transform var(--transition-fast);
 }
 
-.navItem:hover .chevron,
-.navItem:focus-within .chevron {
+.chevronOpen {
   transform: rotate(180deg);
 }
 
 .donateBtn {
   font-family: var(--font-display);
-  font-size: 0.9rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  color: var(--color-dark);
-  background: var(--color-peach);
-  padding: 0.5rem 1.25rem;
-  border-radius: var(--radius-full);
-  transition: background var(--transition-fast), color var(--transition-fast);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-white);
+  background: var(--color-accent);
+  padding: 0.5rem 1.4rem;
+  transition: background var(--transition-fast),
+    transform var(--transition-fast);
+  white-space: nowrap;
 }
 
 .donateBtn:hover {
-  background: var(--color-gold);
-  color: var(--color-white);
+  background: var(--color-accent-mid);
+  transform: translateY(-1px);
+}
+
+.navbar:not(.scrolled) .donateBtn {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1.5px solid rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(4px);
+}
+
+.navbar:not(.scrolled) .donateBtn:hover {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
 }
 
 .dropdown {
   position: absolute;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  top: calc(100% + 4px);
+  top: calc(100% + 6px);
   left: 50%;
   transform: translateX(-50%);
   background: var(--color-white);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
   box-shadow: var(--shadow-lg);
-  min-width: 350px;
+  min-width: 200px;
   padding: var(--space-sm) 0;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: opacity var(--transition-fast), transform var(--transition-fast);
-  transform: translateX(-50%) translateY(-6px);
+  animation: dropdownIn var(--transition-fast) ease forwards;
+  z-index: 10;
 }
 
-.navItem:hover .dropdown,
-.navItem:focus-within .dropdown {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-  transform: translateX(-50%) translateY(0);
+@keyframes dropdownIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
 }
 
 .dropdownLink {
   display: block;
   padding: 0.5rem 1.25rem;
+  font-family: var(--font-body);
   font-size: 0.9rem;
   color: var(--color-charcoal);
   transition: background var(--transition-fast), color var(--transition-fast);
-  cursor: pointer;
 }
 
 .dropdownLink:hover {
-  background: var(--color-bg);
-  color: var(--color-gold);
+  background: var(--color-accent-tint);
+  color: var(--color-accent);
 }
 
 .hamburger {
@@ -153,17 +210,19 @@
   gap: 5px;
   padding: var(--space-sm);
   cursor: pointer;
-  background: none;
-  border: none;
 }
 
 .hamburger span {
   display: block;
   width: 24px;
   height: 2px;
-  background: var(--color-dark);
+  background: var(--color-white);
   border-radius: 2px;
   transition: transform var(--transition-base), opacity var(--transition-base);
+}
+
+.navbar.scrolled .hamburger span {
+  background: var(--color-dark);
 }
 
 .hamburger.open span:nth-child(1) {
@@ -182,7 +241,7 @@
   top: var(--nav-height);
   left: 0;
   right: 0;
-  background: var(--color-bg-light);
+  background: var(--color-white);
   border-bottom: 1px solid var(--color-border);
   padding: var(--space-md) var(--space-xl) var(--space-xl);
   flex-direction: column;
@@ -198,7 +257,10 @@
 }
 
 .mobileLink {
-  font-size: 1rem;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
   color: var(--color-charcoal);
   padding: var(--space-sm) 0;
   border-bottom: 1px solid var(--color-border);
@@ -206,21 +268,25 @@
 }
 
 .mobileLink:hover {
-  color: var(--color-gold);
+  color: var(--color-accent);
 }
 
 .mobileDonateBtn {
   margin-top: var(--space-md);
   font-family: var(--font-display);
   font-size: 0.95rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  color: var(--color-dark);
-  background: var(--color-gold);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: var(--color-white);
+  background: var(--color-accent);
   padding: 0.75rem 1.5rem;
-  border-radius: var(--radius-full);
   text-align: center;
+  transition: background var(--transition-fast);
+}
+
+.mobileDonateBtn:hover {
+  background: var(--color-accent-mid);
 }
 
 @media (max-width: 768px) {
