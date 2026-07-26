@@ -1,27 +1,33 @@
-import type { Metadata, Viewport } from 'next';
-import Navbar from '@/components/layout/Navbar/Navbar';
-import Footer from '@/components/layout/Footer/Footer';
-import '@/styles/globals.css';
+import type { Metadata, Viewport } from "next";
+import Footer from "@/components/layout/Footer/Footer";
+import Navbar from "@/components/layout/Navbar/Navbar";
+import "@/styles/globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: 'St. Philip Neri Catholic Church – Smethwick',
-    template: '%s | St. Philip Neri Catholic Church',
+    default: "St. Philip Neri Catholic Church – Smethwick",
+    template: "%s | St. Philip Neri Catholic Church",
   },
   description:
-    'Welcome to St. Philip Neri Catholic Church in Smethwick, Birmingham. Find Mass times, events, announcements and more.',
-  keywords: ['Catholic Church', 'Smethwick', 'Birmingham', 'Mass', 'St. Philip Neri'],
-  authors: [{ name: 'St. Philip Neri Parish' }],
+    "Welcome to St. Philip Neri Catholic Church in Smethwick, Birmingham. Find Mass times, events, announcements and more.",
+  keywords: [
+    "Catholic Church",
+    "Smethwick",
+    "Birmingham",
+    "Mass",
+    "St. Philip Neri",
+  ],
+  authors: [{ name: "St. Philip Neri Parish" }],
   openGraph: {
-    type: 'website',
-    locale: 'en_GB',
-    url: 'https://stphilipneri.org.uk',
-    siteName: 'St. Philip Neri Catholic Church',
+    type: "website",
+    locale: "en_GB",
+    url: "https://stphilipneri.org.uk",
+    siteName: "St. Philip Neri Catholic Church",
   },
 };
 
 export const viewport: Viewport = {
-  width: 'device-width',
+  width: "device-width",
   initialScale: 1,
 };
 
@@ -37,9 +43,7 @@ export default function RootLayout({
           Skip to main content
         </a>
         <Navbar />
-        <main id="main-content" style={{ paddingTop: 'var(--nav-height)' }}>
-          {children}
-        </main>
+        <main id="main-content">{children}</main>
         <Footer />
       </body>
     </html>
