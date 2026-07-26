@@ -1,66 +1,83 @@
 /* ─── Google Fonts ─────────────────────────────────────────────────────────── */
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Oswald:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Oswald:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap");
 
 /* ─── CSS Variables ─────────────────────────────────────────────────────────── */
 :root {
-  /* Colours */
-  --color-bg:            #fdf5ec;
-  --color-bg-light:      #fef9f4;
-  --color-peach:         #f5d9bf;
-  --color-peach-light:   #fce8d5;
-  --color-gold:          #c8823a;
-  --color-gold-hover:    #b06e2a;
-  --color-gold-light:    #e8a96a;
-  --color-dark:          #1a1a1a;
-  --color-charcoal:      #2c2c2c;
-  --color-text:          #3a3a3a;
-  --color-text-muted:    #6b6b6b;
-  --color-footer-bg:     #111111;
-  --color-footer-text:   #ffffff;
-  --color-red-accent:    #c0392b;
-  --color-error:         #e53e3e;
-  --color-white:         #ffffff;
-  --color-card-bg:       #ffffff;
-  --color-border:        #e8d5c0;
+  /* ── Backgrounds ── */
+  --color-bg: #ededed; /* #ffffff;  was #fdf5ec (warm cream) → now white   */
+  --color-bg-light: #ffffff; /* was #fef9f4               → now white   */
+  --color-card-bg: #ffffff;
+  --color-white: #ffffff;
 
-  /* Typography */
-  --font-display:  'Oswald', sans-serif;
-  --font-serif:    'EB Garamond', Georgia, serif;
-  --font-body:     'Lato', sans-serif;
+  /* ── Royal blue accent (replaces gold + peach) ── */
+  --color-accent: #1a3a6b; /* primary — was --color-gold  #c8823a    */
+  --color-accent-mid: #2d5aa0; /* mid     — was --color-gold-hover       */
+  --color-accent-light: #4a7bc8; /* light variant for hover states         */
+  --color-accent-tint: #e8eef8; /* tint    — was --color-peach #f5d9bf    */
+  --color-accent-tint2: #d0ddf2; /* deeper tint — was --color-peach-light  */
 
-  /* Spacing */
-  --space-xs:   0.25rem;
-  --space-sm:   0.5rem;
-  --space-md:   1rem;
-  --space-lg:   1.5rem;
-  --space-xl:   2rem;
-  --space-2xl:  3rem;
-  --space-3xl:  4rem;
-  --space-4xl:  6rem;
+  /* Keep legacy names pointing at new values so every component just works */
+  --color-gold: #1a3a6b;
+  --color-gold-hover: #2d5aa0;
+  --color-gold-light: #4a7bc8;
+  --color-peach: #e8eef8;
+  --color-peach-light: #d0ddf2;
 
-  /* Border radius */
-  --radius-sm:  0.375rem;
-  --radius-md:  0.75rem;
-  --radius-lg:  1.25rem;
+  /* ── Text ── */
+  --color-dark: #0f1e38; /* deepened slightly for contrast on white */
+  --color-charcoal: #1e2d42;
+  --color-text: #2c3a4a;
+  --color-text-muted: #5a6a7a;
+
+  /* ── Footer (stays dark) ── */
+  --color-footer-bg: #0a1628; /* darker navy to match new accent         */
+  --color-footer-text: #ffffff;
+
+  /* ── Utility ── */
+  --color-red-accent: #c0392b;
+  --color-error: #e53e3e;
+  --color-border: #d0ddf2; /* was #e8d5c0 (warm) → cool blue-grey     */
+
+  /* ── Typography ── */
+  --font-display: "Oswald", sans-serif;
+  --font-serif: "EB Garamond", Georgia, serif;
+  --font-body: "Lato", sans-serif;
+
+  /* ── Spacing ── */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+
+  /* ── Border radius ── */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1.25rem;
   --radius-full: 9999px;
 
-  /* Shadows */
-  --shadow-sm:  0 1px 3px rgba(0,0,0,0.08);
-  --shadow-md:  0 4px 16px rgba(0,0,0,0.10);
-  --shadow-lg:  0 8px 32px rgba(0,0,0,0.12);
+  /* ── Shadows ── */
+  --shadow-sm: 0 1px 3px rgba(26, 58, 107, 0.07);
+  --shadow-md: 0 4px 16px rgba(26, 58, 107, 0.1);
+  --shadow-lg: 0 8px 32px rgba(26, 58, 107, 0.13);
 
-  /* Transitions */
-  --transition-fast:   150ms ease;
-  --transition-base:   250ms ease;
-  --transition-slow:   400ms ease;
+  /* ── Transitions ── */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 400ms ease;
 
-  /* Layout */
+  /* ── Layout ── */
   --max-width: 1200px;
-  --nav-height: 88px;
+  --nav-height: 120px;
 }
 
 /* ─── Reset ─────────────────────────────────────────────────────────────────── */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -103,7 +120,7 @@ button {
   font-family: inherit;
 }
 
-/* ─── Utility Classes ───────────────────────────────────────────────────────── */
+/* ─── Utility ───────────────────────────────────────────────────────────────── */
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -117,14 +134,14 @@ button {
   padding: 0;
   margin: -1px;
   overflow: hidden;
-  clip: rect(0,0,0,0);
+  clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
 }
 
-/* ─── Focus styles for accessibility ───────────────────────────────────────── */
+/* ─── Focus ─────────────────────────────────────────────────────────────────── */
 :focus-visible {
-  outline: 2px solid var(--color-gold);
+  outline: 2px solid var(--color-accent);
   outline-offset: 2px;
   border-radius: var(--radius-sm);
 }

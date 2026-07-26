@@ -1,11 +1,9 @@
-// ─── Navigation ─────────────────────────────────────────────────────────────
 export interface NavLink {
   label: string;
   href: string;
   children?: NavLink[];
 }
 
-// ─── Hero / Carousel ────────────────────────────────────────────────────────
 export interface HeroSlide {
   id: number;
   src: string;
@@ -16,7 +14,6 @@ export interface HeroSlide {
   ctaHref: string;
 }
 
-// ─── Welcome Section ────────────────────────────────────────────────────────
 export interface QuickLink {
   icon: string;
   label: string;
@@ -24,7 +21,6 @@ export interface QuickLink {
   ariaLabel: string;
 }
 
-// ─── Featured Cards ─────────────────────────────────────────────────────────
 export interface FeaturedItem {
   id: number;
   title: string;
@@ -32,7 +28,6 @@ export interface FeaturedItem {
   href: string;
 }
 
-// ─── Blog ────────────────────────────────────────────────────────────────────
 export interface BlogPost {
   id: number;
   title: string;
@@ -43,7 +38,6 @@ export interface BlogPost {
   date: string;
 }
 
-// ─── Parish Hall ─────────────────────────────────────────────────────────────
 export interface ParishHall {
   image: string;
   imageAlt: string;
@@ -55,7 +49,6 @@ export interface ParishHall {
   termsHref: string;
 }
 
-// ─── Footer ──────────────────────────────────────────────────────────────────
 export interface FooterQuickLink {
   label: string;
   href: string;

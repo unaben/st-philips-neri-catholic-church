@@ -27,13 +27,17 @@ export const navLinks: NavLink[] = [
     ],
   },
   { label: "Contact Us", href: "/contact" },
-  { label: "Donate", href: 'https://donate.mydona.com/st-philip-neri-catholic-church' },
 ];
+
+export const donateLink = {
+  label: "Donate",
+  href: "https://donate.mydona.com/st-philip-neri-catholic-church",
+} as const;
 
 export const heroSlides: HeroSlide[] = [
   {
     id: 1,
-    src: "/images/parish-view.webp",
+    src: "/images/parish_view.webp",
     alt: "Mass celebration at St. Philip Neri Catholic Church",
     tagline: "WE WELCOME YOU TO",
     heading: "FOLLOW CHRIST IN LOVE AND WITH A JOYFUL HEART",

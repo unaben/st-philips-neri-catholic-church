@@ -1,0 +1,15 @@
+.accentBar {
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(
+    to right,
+    var(--color-peach),
+    var(--color-gold),
+    var(--color-peach)
+  );
+}
+
+.body {
+  background-color: var(--color-bg);
+  padding: var(--space-4xl) var(--space-xl);
+}
