@@ -1,6 +1,5 @@
 import { useRegistrationForm } from "./useRegistrationForm";
 
- // ── Completion progress (counts filled required fields) ───────────────────────
  export function useProgress(
   formData: ReturnType<typeof useRegistrationForm>["formData"]
 ) {

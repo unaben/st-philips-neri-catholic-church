@@ -8,12 +8,9 @@ export function validateRegistrationForm(
 ): RegistrationFormErrors {
   const errors: RegistrationFormErrors = {};
 
-  // ── Personal ──────────────────────────────────────────────
   if (!data.firstName.trim()) errors.firstName = "First name is required.";
   else if (data.firstName.trim().length < 2)
     errors.firstName = "First name must be at least 2 characters.";
-
-  // middleName is optional — no validation needed
 
   if (!data.lastName.trim()) errors.lastName = "Last name is required.";
   else if (data.lastName.trim().length < 2)
@@ -33,7 +30,6 @@ export function validateRegistrationForm(
 
   if (!data.nationality.trim()) errors.nationality = "Nationality is required.";
 
-  // ── Contact ───────────────────────────────────────────────
   if (!data.email.trim()) errors.email = "Email address is required.";
   else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email))
     errors.email = "Please enter a valid email address.";
@@ -42,7 +38,6 @@ export function validateRegistrationForm(
   else if (!/^[\d\s\+\-\(\)]{7,15}$/.test(data.phone.trim()))
     errors.phone = "Please enter a valid phone number.";
 
-  // ── Address ───────────────────────────────────────────────
   if (!data.addressLine1.trim())
     errors.addressLine1 = "Address line 1 is required.";
 
@@ -50,7 +45,6 @@ export function validateRegistrationForm(
   else if (!/^[A-Z]{1,2}\d[A-Z\d]?\s*\d[A-Z]{2}$/i.test(data.postCode.trim()))
     errors.postCode = "Please enter a valid UK post code (e.g. B66 3DU).";
 
-  // ── Parish ────────────────────────────────────────────────
   if (data.alreadyCatholic === null)
     errors.alreadyCatholic = "Please indicate if you are already a Catholic.";
 
@@ -70,7 +64,6 @@ export function hasErrors(errors: RegistrationFormErrors): boolean {
   return Object.keys(errors).length > 0;
 }
 
-/** Build a formatted mailto body from valid form data */
 export function buildMailtoBody(data: RegistrationFormData): string {
   const lines = [
     `PARISH REGISTRATION — ST. PHILIP NERI CATHOLIC CHURCH`,

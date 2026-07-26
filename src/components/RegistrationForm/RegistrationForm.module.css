@@ -1,12 +1,24 @@
-/* ── Form card ──────────────────────────────────────────────────────────── */
-.form {
-  background: var(--color-white);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-lg);
-  overflow: hidden;
+.header {
+  text-align: center;
 }
 
-/* ── Section blocks ─────────────────────────────────────────────────────── */
+.subheading {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.form {
+  background: var(--color-white);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  max-width: 840px;
+  margin: var(--space-lg) auto 0;
+}
+
 .section {
   padding: var(--space-2xl);
   border-bottom: 1px solid var(--color-border);
@@ -26,7 +38,6 @@
 .sectionIcon {
   width: 36px;
   height: 36px;
-  border-radius: 50%;
   background: var(--color-peach);
   display: flex;
   align-items: center;
@@ -44,7 +55,6 @@
   color: var(--color-gold);
 }
 
-/* ── Grid layouts ───────────────────────────────────────────────────────── */
 .grid2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -61,7 +71,6 @@
   grid-column: span 2;
 }
 
-/* ── Field ──────────────────────────────────────────────────────────────── */
 .field {
   display: flex;
   flex-direction: column;
@@ -94,7 +103,6 @@
   color: var(--color-text);
   background: var(--color-bg-light);
   border: 1.5px solid var(--color-border);
-  border-radius: var(--radius-md);
   padding: 0.7rem 1rem;
   width: 100%;
   transition: border-color var(--transition-fast),
@@ -157,7 +165,6 @@
   font-size: 0.75rem;
 }
 
-/* ── Radio / Checkbox group ─────────────────────────────────────────────── */
 .radioGroup {
   display: flex;
   gap: var(--space-md);
@@ -174,7 +181,6 @@
   cursor: pointer;
   padding: 0.6rem 1.25rem;
   border: 1.5px solid var(--color-border);
-  border-radius: var(--radius-full);
   transition: border-color var(--transition-fast),
     background var(--transition-fast);
   user-select: none;
@@ -198,7 +204,6 @@
   cursor: pointer;
 }
 
-/* ── Progress bar ───────────────────────────────────────────────────────── */
 .progress {
   height: 4px;
   background: var(--color-border);
@@ -213,7 +218,6 @@
   transition: width 0.4s ease;
 }
 
-/* ── Footer / submit area ───────────────────────────────────────────────── */
 .formFooter {
   padding: var(--space-xl) var(--space-2xl);
   background: var(--color-bg);
@@ -222,7 +226,6 @@
   align-items: center;
   justify-content: space-between;
   gap: var(--space-lg);
-  flex-wrap: wrap;
 }
 
 .footerNote {
@@ -230,11 +233,27 @@
   color: var(--color-text-muted);
   max-width: 340px;
   line-height: 1.5;
+  flex: 1;
+}
+
+.footerActions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--space-sm);
+  flex-shrink: 0;
+}
+
+.serverError {
+  font-size: 0.85rem;
+  color: #e53e3e;
+  text-align: right;
 }
 
 .submitBtn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: var(--space-sm);
   font-family: var(--font-display);
   font-size: 1rem;
@@ -244,7 +263,6 @@
   color: var(--color-white);
   background: var(--color-gold);
   padding: 0.85rem 2.5rem;
-  border-radius: var(--radius-full);
   border: none;
   cursor: pointer;
   transition: background var(--transition-fast),
@@ -261,10 +279,14 @@
   transform: translateY(0);
 }
 
-/* ── Success state ──────────────────────────────────────────────────────── */
+.submitBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
 .success {
   background: var(--color-white);
-  border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
   padding: var(--space-4xl) var(--space-2xl);
   text-align: center;
@@ -315,7 +337,6 @@
   color: var(--color-white);
   background: var(--color-gold);
   padding: 0.8rem 2rem;
-  border-radius: var(--radius-full);
   transition: background var(--transition-fast);
   text-decoration: none;
 }
@@ -336,7 +357,6 @@
   color: var(--color-charcoal);
   background: transparent;
   padding: 0.8rem 2rem;
-  border-radius: var(--radius-full);
   border: 2px solid var(--color-border);
   cursor: pointer;
   transition: border-color var(--transition-fast), color var(--transition-fast);
@@ -347,7 +367,6 @@
   color: var(--color-gold);
 }
 
-/* ── Responsive ─────────────────────────────────────────────────────────── */
 @media (max-width: 640px) {
   .page {
     padding: var(--space-2xl) var(--space-md);
@@ -369,6 +388,20 @@
   .formFooter {
     flex-direction: column;
     align-items: stretch;
+    text-align: center;
+    padding: var(--space-lg) var(--space-md);
+  }
+
+  .footerNote {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .footerActions {
+    align-items: stretch;
+  }
+
+  .serverError {
     text-align: center;
   }
 

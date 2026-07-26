@@ -1,6 +1,6 @@
 import type { SectionHeaderProps } from "../RegistrationForm.types";
 import styles from "../RegistrationForm.module.css";
-// ── Section header ────────────────────────────────────────────────────────────
+
 export function SectionHeader({ icon, title }: SectionHeaderProps) {
   return (
     <div className={styles.sectionHeader}>

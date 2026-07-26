@@ -1,7 +1,6 @@
 import { RegistrationFormProps } from "../RegistrationForm.types";
 import styles from "../RegistrationForm.module.css";
 
-// ── Small reusable field wrapper ─────────────────────────────────────────────
 function Field(props: RegistrationFormProps) {
   const { id, label, optional, error, children } = props;
   return (

@@ -9,21 +9,17 @@ export type RegistrationFormProps = {
 export type SectionHeaderProps = { icon: string; title: string };
 
 export interface RegistrationFormData {
-  // Personal
   firstName: string;
-  middleName: string; // optional
+  middleName: string;
   lastName: string;
   dateOfBirth: string;
   nationality: string;
-  // Contact
   email: string;
   phone: string;
-  // Address
   addressLine1: string;
   addressLine2: string;
   postCode: string;
-  // Parish
-  alreadyCatholic: boolean | null; // null = unanswered
+  alreadyCatholic: boolean | null;
   previousParish: string;
   reasonForRegistering: string;
   heardAboutUs: string;
