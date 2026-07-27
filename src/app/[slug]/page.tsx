@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { redirect } from "next/navigation";
-import PlaceholderPage from "@/components/sections/PlaceholderPage/PlaceholderPage";
-import { slugToTitle } from "@/components/sections/PlaceholderPage/utils/slugToTitle";
+import PlaceholderPage from "@/components/PlaceholderPage/PlaceholderPage";
+import { slugToTitle } from "@/components/PlaceholderPage/utils/slugToTitle";
 import { isValidSlug } from "./utils/isValidSlug";
 
 export const revalidate = 300;
