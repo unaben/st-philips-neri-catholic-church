@@ -20,7 +20,7 @@ export const navLinks: NavLink[] = [
       { label: "Blog", href: "/blog" },
       { label: "Announcements", href: "/announcements" },
       { label: "Mass Booking", href: "/mass-booking" },
-      { label: "Safe Guarding", href: "/safe-guarding" },
+      { label: "Safeguarding", href: "/safeguarding" },
       { label: "News & Events", href: "/news-events" },
       { label: "RCIA", href: "/become-a-catholic" },
       { label: "How do I register in the Parish?", href: "/register" },

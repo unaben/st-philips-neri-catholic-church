@@ -1,0 +1,21 @@
+export const APP_LINKS = [
+  "/",
+  "/about",
+  "/announcements",
+  "/being-catholic",
+  "/blog",
+  "/blog/how-to-truly-trust-someone",
+  "/confessions",
+  "/contact",
+  "/events",
+  "/events/coffee-morning",
+  "/events/first-holy-communion",
+  "/events/youth-group",
+  "/legion-of-mary",
+  "/mass-booking",
+  "/masses",
+  "/news-events",
+  "/register",
+  "/safeguarding",
+  "/subscribe"
+] as const;

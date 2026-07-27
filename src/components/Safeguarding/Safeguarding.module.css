@@ -1,0 +1,303 @@
+.accentBar {
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(
+      to right,
+      var(--color-accent-tint),
+      var(--color-accent),
+      var(--color-accent-tint)
+    );
+  }
+
+  .intro {
+    background: var(--color-bg);
+    padding-top: var(--space-3xl);
+    padding-bottom: var(--space-2xl);
+    text-align: center;
+  }
+  
+  .introInner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-md);
+  }
+  
+  .rainbowBar {
+    height: 5px;
+    width: 120px;
+    margin: 0 auto var(--space-sm);
+    border-radius: var(--radius-full);
+    background: linear-gradient(
+      90deg,
+      var(--color-red-accent),
+      var(--color-accent-light),
+      var(--color-accent-mid),
+      var(--color-accent),
+      var(--color-red-accent)
+    );
+  }
+  
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-red-accent);
+  }
+  
+  .title {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--color-dark);
+    line-height: 1.2;
+  }
+  
+  .titleUnderline {
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--color-accent);
+    border-radius: var(--radius-full);
+    margin: var(--space-md) auto 0;
+  }
+  
+  .leadText {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    color: var(--color-text-muted);
+    line-height: 1.85;
+    max-width: 760px;
+  }
+  
+  .body {
+    padding-top: var(--space-3xl);
+    padding-bottom: var(--space-4xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3xl);
+  }
+  
+  .section {
+    padding-top: var(--space-2xl);
+    border-top: 1px solid var(--color-border);
+  }
+  
+  .sectionHeading {
+    font-family: var(--font-display);
+    font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin: 0 0 var(--space-xl);
+    text-align: center;
+  }
+  
+  .sectionIntro {
+    font-size: 0.98rem;
+    color: var(--color-text-muted);
+    line-height: 1.75;
+    max-width: 700px;
+    margin: 0 auto var(--space-xl);
+    text-align: center;
+  }
+  
+  .principlesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--space-lg);
+  }
+  
+  .principleCard {
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    padding: var(--space-xl) var(--space-lg);
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+    transition: box-shadow var(--transition-base), transform var(--transition-base);
+  }
+  
+  .principleCard:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
+  
+  .principleIcon {
+    font-size: 1.8rem;
+    margin-bottom: var(--space-md);
+  }
+  
+  .principleTitle {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--color-dark);
+    margin: 0 0 var(--space-sm);
+  }
+  
+  .principleText {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    line-height: 1.65;
+  }
+  
+  .stepsList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    max-width: 760px;
+    margin-inline: auto;
+  }
+  
+  .stepItem {
+    display: flex;
+    gap: var(--space-lg);
+    align-items: flex-start;
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    padding: var(--space-lg);
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .stepNumber {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    color: var(--color-white);
+    font-family: var(--font-display);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .stepTitle {
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--color-dark);
+    margin: 0 0 4px;
+  }
+  
+  .stepText {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    line-height: 1.65;
+  }
+  
+  .contactsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--space-lg);
+  }
+  
+  .contactCard {
+    background: var(--color-accent-tint);
+    border: 1px solid var(--color-border);
+    padding: var(--space-lg);
+    text-align: center;
+  }
+  
+  .contactLabel {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    margin-bottom: 6px;
+  }
+  
+  .contactValue {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-dark);
+    line-height: 1.5;
+  }
+  
+  .contactLink {
+    color: var(--color-accent-mid);
+    text-decoration: none;
+  }
+  
+  .contactLink:hover {
+    color: var(--color-accent);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  
+  .resourcesList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--space-lg);
+  }
+  
+  .resourceCard {
+    display: block;
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    padding: var(--space-lg);
+    box-shadow: var(--shadow-sm);
+    text-decoration: none;
+    transition: box-shadow var(--transition-base), transform var(--transition-base);
+  }
+  
+  .resourceCard:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
+  
+  .resourceName {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--color-accent);
+    margin-bottom: var(--space-sm);
+  }
+  
+  .resourceText {
+    font-size: 0.88rem;
+    color: var(--color-text-muted);
+    line-height: 1.65;
+  }
+  
+  .closingNote {
+    text-align: center;
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--color-text-muted);
+    padding-top: var(--space-xl);
+    border-top: 1px solid var(--color-border);
+  }
+  
+  @media (max-width: 640px) {
+    .stepItem {
+      padding: var(--space-md);
+      gap: var(--space-md);
+    }
+  
+    .principleCard,
+    .contactCard,
+    .resourceCard {
+      padding: var(--space-md);
+    }
+  }
