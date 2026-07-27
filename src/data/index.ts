@@ -10,7 +10,7 @@ import type {
 
 export const navLinks: NavLink[] = [
   { label: "About Us", href: "/about" },
-  { label: "Masses", href: "/masses" },
+  { label: "Mass times", href: "/mass-times" },
   {
     label: "More",
     href: "#",
@@ -51,7 +51,7 @@ export const heroSlides: HeroSlide[] = [
     tagline: "COME AND WORSHIP WITH US",
     heading: "A COMMUNITY UNITED IN FAITH AND LOVE",
     ctaLabel: "JOIN US",
-    ctaHref: "/masses",
+    ctaHref: "/mass-times",
   },
 ];
 
@@ -59,7 +59,7 @@ export const quickLinks: QuickLink[] = [
   {
     icon: "⛪",
     label: "MASSES",
-    href: "/masses",
+    href: "/mass-times",
     ariaLabel: "View Mass times",
   },
   {
@@ -131,7 +131,7 @@ export const blogPosts: BlogPost[] = [
 export const footerQuickLinks: FooterQuickLink[] = [
   { label: "ABOUT US", href: "/about" },
   { label: "BEING CATHOLIC", href: "/being-catholic" },
-  { label: "MASSES", href: "/masses" },
+  { label: "MASSES", href: "/mass-times" },
   { label: "LEGION OF MARY", href: "/legion-of-mary" },
   { label: "EVENT", href: "/events" },
   { label: "ANNOUNCEMENT", href: "/announcements" },

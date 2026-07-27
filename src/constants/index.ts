@@ -13,9 +13,10 @@ export const APP_LINKS = [
   "/events/youth-group",
   "/legion-of-mary",
   "/mass-booking",
-  "/masses",
+  "/mass-times",
   "/news-events",
   "/register",
   "/safeguarding",
-  "/subscribe"
+  "/subscribe",
+  "/become-a-catholic"
 ] as const;

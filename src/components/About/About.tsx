@@ -111,7 +111,7 @@ import styles from "./About.module.css";
           parish family for worship, prayer and fellowship.
         </p>
         <div className={styles.ctaGroup}>
-          <Link href="/masses" className={styles.btnPrimary}>
+          <Link href="/mass-times" className={styles.btnPrimary}>
             Mass Times
           </Link>
           <Link href="/contact" className={styles.btnSecondary}>
