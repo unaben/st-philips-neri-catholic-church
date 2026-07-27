@@ -206,7 +206,6 @@
 
 .progress {
   height: 4px;
-  background: var(--color-border);
   border-radius: 0;
   overflow: hidden;
 }

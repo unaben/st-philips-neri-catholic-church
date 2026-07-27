@@ -25,9 +25,15 @@ export default function Subscribe() {
   return (
     <div className={styles.section} aria-label="Newsletter subscription">
       <div className={styles.inner}>
-        <h2 className={styles.heading}>
-          Stories of hope, straight to your inbox
-        </h2>
+        <div className={styles.headingGroup}>
+          <h2 className={styles.heading}>
+            Stay connected with our parish family
+          </h2>
+          <p className={styles.subtext}>
+            Get news, upcoming events, and reflections from St. Philip Neri —
+            straight to your inbox.
+          </p>
+        </div>
 
         <form
           className={styles.form}
@@ -42,7 +48,7 @@ export default function Subscribe() {
             id="subscribe-email"
             type="email"
             className={styles.input}
-            placeholder="Yourmail@gmail.com"
+            placeholder="Your email address"
             value={email}
             onChange={(e) => handleEmailChange(e.target.value)}
             aria-describedby={errorMsg ? "subscribe-error" : undefined}

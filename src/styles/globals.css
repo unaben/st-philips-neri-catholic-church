@@ -4,19 +4,17 @@
 /* ─── CSS Variables ─────────────────────────────────────────────────────────── */
 :root {
   /* ── Backgrounds ── */
-  --color-bg: #ededed; /* #ffffff;  was #fdf5ec (warm cream) → now white   */
-  --color-bg-light: #ffffff; /* was #fef9f4               → now white   */
+  --color-bg: #ededed;
+  --color-bg-light: #ffffff;
   --color-card-bg: #ffffff;
   --color-white: #ffffff;
 
-  /* ── Royal blue accent (replaces gold + peach) ── */
-  --color-accent: #1a3a6b; /* primary — was --color-gold  #c8823a    */
-  --color-accent-mid: #2d5aa0; /* mid     — was --color-gold-hover       */
-  --color-accent-light: #4a7bc8; /* light variant for hover states         */
-  --color-accent-tint: #e8eef8; /* tint    — was --color-peach #f5d9bf    */
-  --color-accent-tint2: #d0ddf2; /* deeper tint — was --color-peach-light  */
+  --color-accent: #1a3a6b;
+  --color-accent-mid: #2d5aa0;
+  --color-accent-light: #4a7bc8;
+  --color-accent-tint: #e8eef8;
+  --color-accent-tint2: #d0ddf2;
 
-  /* Keep legacy names pointing at new values so every component just works */
   --color-gold: #1a3a6b;
   --color-gold-hover: #2d5aa0;
   --color-gold-light: #4a7bc8;
@@ -24,19 +22,19 @@
   --color-peach-light: #d0ddf2;
 
   /* ── Text ── */
-  --color-dark: #0f1e38; /* deepened slightly for contrast on white */
+  --color-dark: #0f1e38;
   --color-charcoal: #1e2d42;
   --color-text: #2c3a4a;
   --color-text-muted: #5a6a7a;
 
   /* ── Footer (stays dark) ── */
-  --color-footer-bg: #0a1628; /* darker navy to match new accent         */
+  --color-footer-bg: #0a1628;
   --color-footer-text: #ffffff;
 
   /* ── Utility ── */
   --color-red-accent: #c0392b;
   --color-error: #e53e3e;
-  --color-border: #d0ddf2; /* was #e8d5c0 (warm) → cool blue-grey     */
+  --color-border: #d0ddf2;
 
   /* ── Typography ── */
   --font-display: "Oswald", sans-serif;

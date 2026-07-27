@@ -11,10 +11,19 @@
   max-width: var(--max-width);
   margin: 0 auto;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: var(--space-2xl);
   min-width: 0;
+}
+
+.headingGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1 1 260px;
+  max-width: 420px;
 }
 
 .heading {
@@ -24,8 +33,17 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--color-dark);
-  max-width: 360px;
   line-height: 1.25;
+}
+
+.subtext {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--color-text-muted);
+  line-height: 1.6;
 }
 
 .form {
@@ -33,9 +51,9 @@
   align-items: stretch;
   border: 1.5px solid var(--color-border);
   overflow: hidden;
-  flex: 1;
+  flex: 1 1 300px;
+  min-width: 260px;
   max-width: 500px;
-  min-width: 0;
 }
 
 .input {
@@ -102,9 +120,11 @@
     padding: var(--space-lg) var(--space-lg);
   }
 
-  .heading {
+  .headingGroup {
     max-width: 100%;
-    margin: auto;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
   }
 
   .inner {
@@ -127,6 +147,10 @@
 
   .heading {
     font-size: 1rem;
+  }
+
+  .subtext {
+    font-size: 0.85rem;
   }
 
   .input {

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { slugToTitle } from "./utils/slugToTitle";
 import Subscribe from "../Subscribe/Subscribe";
 import Hero from "@/components/Hero/Hero";
+import ContentWrap from "@/components/ContentWrap/ContentWrap";
 import styles from "./PlaceholderPage.module.css";
 
 const PAGE_CONTENT: Record<string, React.ReactNode> = {
@@ -48,10 +49,11 @@ export default async function PlaceholderPage({
   return (
     <>
       <Hero title={title} />
-      <div className={styles.accentBar} aria-hidden="true" />
-      <div className={styles.body}>
-      <div className={styles.rainbowBar} />
-        <div className={styles.bodyInner}>
+      <ContentWrap as="div" className={styles.body}>
+        <div className={styles.accentBar} aria-hidden="true" />
+        <div className={styles.rainbowBar} />
+        <span className={styles.rainbowBarBadge}>{title}</span>
+        <ContentWrap className={styles.bodyInner}>
           {resolveContent(slug, title)}
           <div className={styles.divider} />
           <div
@@ -101,8 +103,8 @@ export default async function PlaceholderPage({
               Contact Us
             </Link>
           </div>
-        </div>
-      </div>
+        </ContentWrap>
+      </ContentWrap>
     </>
   );
 }
