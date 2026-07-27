@@ -11,7 +11,6 @@
 
 .intro {
   background: var(--color-bg);
-  padding-top: var(--space-3xl);
   padding-bottom: var(--space-2xl);
   text-align: center;
 }
@@ -36,7 +35,7 @@
 .rainbowBar {
   height: 5px;
   width: 120px;
-  margin: 0 auto var(--space-md);
+  margin: var(--space-lg) auto var(--space-md);
   border-radius: var(--radius-full);
   background: linear-gradient(
     90deg,

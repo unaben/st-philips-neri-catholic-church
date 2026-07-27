@@ -7,10 +7,10 @@ import styles from "./RCIA.module.css";
 export default function RCIAPage() {
   return (
     <>
-      <Hero title="Becoming a Catholic" imgUrl="/images/become-a-catholic.webp" />
-      <div className={styles.accentBar} aria-hidden="true" />
+      <Hero title="Becoming a Catholic" imgUrl="/images/become-a-catholic.webp" />      
       <div className={styles.intro}>
         <ContentWrap className={styles.introInner}>
+        <div className={styles.accentBar} aria-hidden="true" />
           <div className={styles.rainbowBar} />
           <span className={styles.badge}>RCIA / OCIA</span>
           <h1 className={styles.title}>

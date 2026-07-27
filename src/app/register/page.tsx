@@ -6,7 +6,7 @@ import styles from "./register.module.css";
 const RegisterPage = () => {
   return (
     <>
-      <Hero title="Registration" />
+      <Hero title="Registration" imgUrl="/images/rosary_on_bible.webp"/>
       <ContentWrap as="div" className={styles.body}>
         <div className={styles.accentBar} aria-hidden="true" />
         <div className={styles.intro}>

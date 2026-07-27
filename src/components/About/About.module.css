@@ -25,7 +25,7 @@
 .rainbowBar {
   height: 5px;
   width: 120px;
-  margin: 0 auto var(--space-sm);
+  margin: var(--space-sm) auto;
   border-radius: var(--radius-full);
   background: linear-gradient(
     90deg,

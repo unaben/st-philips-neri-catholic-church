@@ -7,7 +7,7 @@ import styles from "./Masses.module.css";
 export default function MassesPage() {
   return (
     <>
-      <Hero title="Mass Times" />
+      <Hero title="Mass Times" imgUrl="/images/chalice.webp" />
       <div className={styles.intro}>
         <ContentWrap className={styles.introInner}>
         <div className={styles.accentBar} aria-hidden="true" />

@@ -7,10 +7,10 @@ import styles from "./About.module.css";
  function AboutPage() {
   return (
     <>
-      <Hero title="About Us" />
-      <div className={styles.accentBar} aria-hidden="true" />
+      <Hero title="About Us" />      
       <div className={styles.intro}>
         <ContentWrap className={styles.introInner}>
+        <div className={styles.accentBar} aria-hidden="true" />
           <div className={styles.rainbowBar} />
           <span className={styles.badge}>Our Story</span>
           <h1 className={styles.title}>

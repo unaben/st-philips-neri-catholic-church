@@ -13,7 +13,6 @@ export default function SafeguardingPage() {
   return (
     <>
       <div className={styles.accentBar} aria-hidden="true" />
-
       <div className={styles.intro}>
         <ContentWrap className={styles.introInner}>
           <div className={styles.rainbowBar} />

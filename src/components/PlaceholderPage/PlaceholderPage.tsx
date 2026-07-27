@@ -45,10 +45,12 @@ export default async function PlaceholderPage({
 }) {
   const { slug } = await params;
   const title = slugToTitle(slug);
+  const subscribeImgUrl =
+    slug in PAGE_CONTENT ? "/images/rosary.webp" : "/images/psalm23.webp";
 
   return (
     <>
-      <Hero title={title} />
+      <Hero title={title} imgUrl={subscribeImgUrl} />
       <ContentWrap as="div" className={styles.body}>
         <div className={styles.accentBar} aria-hidden="true" />
         <div className={styles.rainbowBar} />
