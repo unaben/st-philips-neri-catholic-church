@@ -18,6 +18,11 @@ export const metadata: Metadata = {
     "St. Philip Neri",
   ],
   authors: [{ name: "St. Philip Neri Parish" }],
+  icons: {
+    icon: "/icon.svg",
+    shortcut: "/icon.svg",
+    apple: "/icon.svg",
+  },
   openGraph: {
     type: "website",
     locale: "en_GB",
@@ -29,6 +34,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
+  themeColor: "#1a3a6b",
 };
 
 export default function RootLayout({

@@ -34,47 +34,48 @@ export default function Subscribe() {
             straight to your inbox.
           </p>
         </div>
-
-        <form
-          className={styles.form}
-          onSubmit={handleSubmit}
-          noValidate
-          aria-label="Subscribe to newsletter"
-        >
-          <label htmlFor="subscribe-email" className="sr-only">
-            Email address
-          </label>
-          <input
-            id="subscribe-email"
-            type="email"
-            className={styles.input}
-            placeholder="Your email address"
-            value={email}
-            onChange={(e) => handleEmailChange(e.target.value)}
-            aria-describedby={errorMsg ? "subscribe-error" : undefined}
-            disabled={isLoading}
-            required
-          />
-          <button
-            type="submit"
-            className={styles.button}
-            disabled={isLoading}
-            aria-busy={isLoading}
+        <div>
+          <form
+            className={styles.form}
+            onSubmit={handleSubmit}
+            noValidate
+            aria-label="Subscribe to newsletter"
           >
-            {isLoading ? "SENDING…" : "SUBSCRIBE"}
-          </button>
-        </form>
+            <label htmlFor="subscribe-email" className="sr-only">
+              Email address
+            </label>
+            <input
+              id="subscribe-email"
+              type="email"
+              className={styles.input}
+              placeholder="Your email address"
+              value={email}
+              onChange={(e) => handleEmailChange(e.target.value)}
+              aria-describedby={errorMsg ? "subscribe-error" : undefined}
+              disabled={isLoading}
+              required
+            />
+            <button
+              type="submit"
+              className={styles.button}
+              disabled={isLoading}
+              aria-busy={isLoading}
+            >
+              {isLoading ? "SENDING…" : "SUBSCRIBE"}
+            </button>
+          </form>
 
-        {errorMsg && (
-          <p
-            id="subscribe-error"
-            className={styles.errorMsg}
-            role="alert"
-            aria-live="polite"
-          >
-            {errorMsg}
-          </p>
-        )}
+          {errorMsg && (
+            <p
+              id="subscribe-error"
+              className={styles.errorMsg}
+              role="alert"
+              aria-live="polite"
+            >
+              {errorMsg}
+            </p>
+          )}
+        </div>
       </div>
     </div>
   );

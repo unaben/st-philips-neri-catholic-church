@@ -132,7 +132,7 @@ export const blogPosts: BlogPost[] = [
 export const footerQuickLinks: FooterQuickLink[] = [
   { label: "ABOUT US", href: "/about" },
   { label: "BEING CATHOLIC", href: "/being-catholic" },
-  { label: "MASSES", href: "/mass-times" },
+  { label: "MASS TIMES", href: "/mass-times" },
   { label: "LEGION OF MARY", href: "/legion-of-mary" },
   { label: "EVENT", href: "/events" },
   { label: "ANNOUNCEMENT", href: "/announcements" },

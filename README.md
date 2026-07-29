@@ -1,6 +1,10 @@
 # St. Philip Neri Catholic Church — Next.js Website
 
-A production-ready church website built with **Next.js 15 (App Router)**, **TypeScript**, and **CSS Modules**.
+
+Live - https://st-philips-neri-catholic-church.vercel.app
+
+
+A production-ready church website built with **Next.js 16 (App Router)**, **TypeScript**, and **CSS Modules**.
 
 ## Project Structure
 

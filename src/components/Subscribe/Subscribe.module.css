@@ -112,6 +112,7 @@
   font-weight: 600;
   color: var(--color-error);
   margin-top: var(--space-sm);
+  display: flex;
 }
 
 @media (max-width: 768px) {
