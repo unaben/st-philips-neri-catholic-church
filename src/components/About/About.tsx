@@ -114,7 +114,7 @@ import styles from "./About.module.css";
           <Link href="/mass-times" className={styles.btnPrimary}>
             Mass Times
           </Link>
-          <Link href="/contact" className={styles.btnSecondary}>
+          <Link href="/about/contact" className={styles.btnSecondary}>
             Contact Us
           </Link>
         </div>

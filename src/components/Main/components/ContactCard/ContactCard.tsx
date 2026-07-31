@@ -9,7 +9,7 @@ type ContactCardProps = {
 };
 
 export default function ContactCard({ person, featured }: ContactCardProps) {
-  const { role, name, email, phone, dayOff, ext } = person;
+  const { role, name, email, phone, dayOff } = person;
 
   return (
     <div className={cn(styles.card, featured && styles.featured)}>
@@ -24,7 +24,6 @@ export default function ContactCard({ person, featured }: ContactCardProps) {
           className={styles.phone}
         >
           {phone}
-          {ext ? ` ext. ${ext}` : ""}
         </Link>
       )}
       {dayOff && <p className={styles.meta}>Day off: {dayOff}</p>}

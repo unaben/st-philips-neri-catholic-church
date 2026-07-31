@@ -12,62 +12,47 @@ export const churchData: MainSectionProps = {
       name: "Fr. Gerald Bonaventure Peter C.S.Sp",
       email: "stphilip.smethwick@rcaob.org.uk",
       dayOff: "Monday",
-      phone: "0121 558 1065",
-      ext: 3,
+      phone: "0121 558 1065 | 07799 829 640",
     },
   ],
 
   staff: [
     {
-      role: "Parish Administrator",
-      name: "Priya Joseph",
-      email: "priyajoseph@rcdow.org.uk",
-      hours: "Working days: Monday – Thursday 9:30am to 1pm",
-      ext: 2,
+      role: "Hall Manager",
+      name: "Mr Eddy",
+      email: "stphilips.smethwick@rcaob.org.uk",
+      phone: "07443 492 963",
     },
     {
-      role: "Parish Catechist",
-      name: "Lionel Pereira",
-      email: "hounslowcat@rcdow.org.uk",
-      dayOff: "Fri & Sat or Thu in lieu of Sat on FHC weekends",
-      ext: 6,
-    },
-    {
-      role: "Parish Youth Worker",
-      name: "Ivan Čižmárik",
-      email: "ivancizmarik@rcdow.org.uk",
-      hours: "Working days: Sunday & Wednesday",
-    },
-    {
-      role: "Parish Centre Manager",
-      name: "Senorita Evans",
-      email: "senoritaevans@rcdow.org.uk",
-      hours: "MON, THU & FRI 7:00AM–8:30AM; TUE & WED 4:00PM–5:00PM",
-    },
+      role: "Legion Of Mary",
+      name: "Elisabete Capela",
+      email: "stphilips.smethwick@rcaob.org.uk",
+      phone: "0121 558 1065",
+    }
   ],
 
   safeguardingReps: [
-    { email: "hounslowsg@safeguardrcdow.org.uk", name: "Lorna – Admin" },
-    { email: "hounslowsg1@safeguardrcdow.org.uk", name: "Chinyere" },
+    { name: "Wendell Gopaul",
+      email: "safeguarding@rcaob.org.uk",
+      phone: "0121 533 9382 | 0121 234 6240", },
   ],
 
-  privacyPolicyUrl: "https://rcdow.org.uk/diocese/privacy-policy",
+  privacyPolicyUrl: "/about/privacy-policy",
 
   address: {
     street: "Messenger Road",
     city: "Birmingham",
     postcode: "B66 3DU",
-    tel: "0121 558 1065",
+    tel: "0121 558 1065 | 07799 829 640",
   },
 
   officeHours: {
-    label: "Parish Office Hours: Monday – Thursday 9:30AM – 1PM",
-    note: "(Friday the office is closed)",
+    label: "Parish Office Hours: Friday 10:30AM – 2:30PM",
   },
 
   social: {
     email: "stphilip.smethwick@rcaob.org.uk",
-    facebook: "/ssmmhounslow",
-    twitter: "@ssmmhounslow",
+    facebook: "Coming soon",
+    twitter: "Coming soon",
   },
 };

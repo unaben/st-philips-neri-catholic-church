@@ -1,10 +1,10 @@
-export type MassScheduleItem = {
+export interface MassTimeEntry {
   days: string;
   location: string;
   time: string;
-};
+}
 
-export type MassGroup = {
-  title: string;
-  schedule: MassScheduleItem[];
-};
+export interface MassScheduleGroup {
+  id: string;
+  entries: MassTimeEntry[];
+}

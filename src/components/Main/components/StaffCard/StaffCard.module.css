@@ -14,7 +14,7 @@
   .role {
     display: block;
     font-family: var(--font-display);
-    font-size: 0.68rem;
+    font-size: 1rem;
     font-weight: 700;
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -32,7 +32,7 @@
   
   .email {
     display: block;
-    font-size: 0.82rem;
+    font-size: 1rem;
     color: var(--color-accent-mid);
     text-decoration: none;
     word-break: break-all;

@@ -1,9 +1,10 @@
 import { usePathname } from "next/navigation";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 const useNavbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [mobileOpenDropdown, setMobileOpenDropdown] = useState<string | null>(null);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const pathname = usePathname();
 
@@ -17,37 +18,38 @@ const useNavbar = () => {
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setMenuOpen(false);
+    setMobileOpenDropdown(null);
     setOpenDropdown(null);
   }, [pathname]);
 
-  useEffect(() => {
-    if (!openDropdown) return;
-    const handleClickOutside = (e: MouseEvent) => {
-      const target = e.target as HTMLElement;
-      if (!target.closest("[data-nav-item]")) {
-        setOpenDropdown(null);
-      }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, [openDropdown]);
+  const toggleMobileDropdown = useCallback((label: string) => {
+    setMobileOpenDropdown((prev) => (prev === label ? null : label));
+  }, []);
 
-  const toggleDropdown = (label: string) => {
-    setOpenDropdown((prev) => (prev === label ? null : label));
-  };
+  const closeMenu = useCallback(() => {
+    setMenuOpen(false);
+    setMobileOpenDropdown(null);
+  }, []);
 
-  const closeDropdown = () => setOpenDropdown(null);
+  const openDesktopDropdown = useCallback((label: string) => {
+    setOpenDropdown(label);
+  }, []);
+
+  const closeDesktopDropdown = useCallback(() => {
+    setOpenDropdown(null);
+  }, []);
 
   return {
     scrolled,
-    setScrolled,
     menuOpen,
     setMenuOpen,
+    mobileOpenDropdown,
+    toggleMobileDropdown,
+    closeMenu,
     openDropdown,
-    setOpenDropdown,
-    toggleDropdown,
-    closeDropdown,
-    pathname
+    openDesktopDropdown,
+    closeDesktopDropdown,
+    pathname,
   };
 };
 

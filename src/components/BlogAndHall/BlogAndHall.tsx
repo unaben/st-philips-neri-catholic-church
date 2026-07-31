@@ -51,12 +51,12 @@ export default function BlogAndHall() {
               ST. PHILIP&apos;S<br />PARISH HALL
             </h2>
             <p className={styles.hallSubtitle}>For hiring and facilities</p>
-            <Link href="/contact" className={styles.contactBtn}>
+            <Link href="/about/contact" className={styles.contactBtn}>
               Contact Us
             </Link>
             <p className={styles.termsNote}>
               Please read the{' '}
-              <Link href="/terms" className={styles.termsLink}>
+              <Link href="/about/privacy-policy" className={styles.termsLink}>
                 Terms &amp; Conditions
               </Link>{' '}
               for hall hire.

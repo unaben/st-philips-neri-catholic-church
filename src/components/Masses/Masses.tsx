@@ -1,7 +1,7 @@
 import Link from "next/link";
 import ContentWrap from "@/components/ContentWrap/ContentWrap";
 import Hero from "@/components/Hero/Hero";
-import { SUNDAY_MASS, WEEKDAY_MASS, SCHOOL_MASS } from "./constants";
+import { MASS_SCHEDULE } from "./constants";
 import styles from "./Masses.module.css";
 
 export default function MassesPage() {
@@ -10,7 +10,7 @@ export default function MassesPage() {
       <Hero title="Mass Times" imgUrl="/images/chalice.webp" />
       <div className={styles.intro}>
         <ContentWrap className={styles.introInner}>
-        <div className={styles.accentBar} aria-hidden="true" />
+          <div className={styles.accentBar} aria-hidden="true" />
           <div className={styles.rainbowBar} />
           <span className={styles.badge}>Join Us in Worship</span>
           <h1 className={styles.title}>
@@ -31,44 +31,21 @@ export default function MassesPage() {
           <h2 className={styles.scheduleHeading}>Mass Times</h2>
 
           <div className={styles.scheduleList}>
-            <div className={styles.scheduleRow}>
-              <span className={styles.scheduleDays}>
-                {SUNDAY_MASS.days}{" "}
-                <span className={styles.scheduleLocation}>
-                  ({SUNDAY_MASS.location})
-                </span>
-              </span>
-              <span className={styles.scheduleTime}>{SUNDAY_MASS.time}</span>
-            </div>
-
-            <div className={styles.scheduleRow}>
-              <span className={styles.scheduleDays}>
-                {WEEKDAY_MASS.days}{" "}
-                <span className={styles.scheduleLocation}>
-                  ({WEEKDAY_MASS.location})
-                </span>
-              </span>
-              <span className={styles.scheduleTime}>{WEEKDAY_MASS.time}</span>
-            </div>
-
-            <div className={styles.scheduleRow}>
-              <span className={styles.scheduleDays}>
-                {SCHOOL_MASS.days}{" "}
-                <span className={styles.scheduleLocation}>
-                  ({SCHOOL_MASS.location})
-                </span>
-              </span>
-              <span className={styles.scheduleTime}>{SCHOOL_MASS.time}</span>
-            </div>
-          </div>
-
-          <div className={styles.scheduleLinks}>
-            <Link href="/announcements" className={styles.scheduleLink}>
-              More →
-            </Link>
-            <Link href="/mass-booking" className={styles.scheduleLink}>
-              Mass Booking →
-            </Link>
+            {MASS_SCHEDULE.map((group) => (
+              <div key={group.id} className={styles.scheduleRow}>
+                {group.entries.map((entry, index) => (
+                  <div key={index} className={styles.scheduleRowItem}>
+                    <span className={styles.scheduleDays}>
+                      {entry.days}{" "}
+                      <span className={styles.scheduleLocation}>
+                        ({entry.location})
+                      </span>
+                    </span>
+                    <span className={styles.scheduleTime}>{entry.time}</span>
+                  </div>
+                ))}
+              </div>
+            ))}
           </div>
         </div>
 
@@ -78,17 +55,17 @@ export default function MassesPage() {
           </span>
           <p className={styles.noteText}>
             <strong>Parish</strong> Masses are held in the main church on
-            Messenger Road. <strong>School</strong> {''} Masses are held at St.
+            Messenger Road. <strong>School</strong>{" "} Masses are held at St.
             Philip&apos;s Catholic Primary School and are open to all
             parishioners, not just the school community.
           </p>
         </div>
 
         <div className={styles.ctaGroup}>
-          <Link href="/mass-booking" className={styles.btnPrimary}>
+          <Link href="/about/mass-booking" className={styles.btnPrimary}>
             Book a Mass
           </Link>
-          <Link href="/contact" className={styles.btnSecondary}>
+          <Link href="/about/contact" className={styles.btnSecondary}>
             Contact Us
           </Link>
         </div>

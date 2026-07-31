@@ -1,17 +1,29 @@
-export const INFO_ROWS = [
+export interface ContactInfoRow {
+  icon: string;
+  label: string;
+  href?: string;
+  value: string | { text: string; href: string }[];
+}
+
+export const INFO_ROWS: ContactInfoRow[] = [
   {
     icon: "📍",
-    label: "Address",
-    value: "Messenger Road, Smethwick, Birmingham B66 3DU",
+    label: "Postal Address - Presbytery",
+    href: "https://maps.google.com/?q=20+Messenger+Road,+Smethwick,+Birmingham+B66+3DU",
+    value: "20 Messenger Road, Smethwick, Birmingham B66 3DU",
   },
   {
     icon: "📞",
-    label: "Telephone",
-    value: "0121 558 1065",
+    label: "Telephone & Mobile",
+    value: [
+      { text: "0121 558 1065", href: "tel:01215581065" },
+      { text: "07799 829 640", href: "tel:07799829640" },
+    ],
   },
   {
     icon: "✉️",
     label: "Email",
+    href: "mailto:stphilip.smethwick@rcaob.org.uk",
     value: "stphilip.smethwick@rcaob.org.uk",
   },
   {
@@ -21,7 +33,7 @@ export const INFO_ROWS = [
   },
   {
     icon: "🕐",
-    label: "Parish Office",
-    value: "Mon – Fri: 9:00am – 1:00pm",
+    label: "Parish Office Hours",
+    value: "Fri: 10:30am – 2:30pm",
   },
-] as const;
+];

@@ -25,7 +25,7 @@ export default function RCIAPage() {
             tradition, or simply have questions, you are warmly welcome to begin
             this journey with us at St. Philip Neri.
           </p>
-          <Link href="/contact" className={styles.btnPrimary}>
+          <Link href="/about/contact" className={styles.btnPrimary}>
             Start the Conversation
           </Link>
         </ContentWrap>
@@ -93,7 +93,7 @@ export default function RCIAPage() {
           welcoming parish family ready to walk this journey with you.
         </p>
         <div className={styles.ctaGroup}>
-          <Link href="/contact" className={styles.btnPrimary}>
+          <Link href="/about/contact" className={styles.btnPrimary}>
             Speak to Our Parish Priest
           </Link>
           <Link href="/mass-times" className={styles.btnSecondary}>

@@ -7,7 +7,7 @@ type StaffCardProps = {
 };
 
 export default function StaffCard({ person }: StaffCardProps) {
-  const { role, name, email, hours, dayOff, ext } = person;
+  const { role, name, email, phone } = person;
 
   return (
     <div className={styles.card}>
@@ -15,11 +15,8 @@ export default function StaffCard({ person }: StaffCardProps) {
       <h3 className={styles.name}>{name}</h3>
       <Link href={`mailto:${email}`} className={styles.email}>
         {email}
-        {ext ? <span className={styles.ext}> · ext. {ext}</span> : null}
       </Link>
-      {(hours || dayOff) && (
-        <p className={styles.meta}>{hours ?? `Day off: ${dayOff}`}</p>
-      )}
+      <p className={styles.name}>{phone}</p>
     </div>
   );
 }

@@ -20,6 +20,7 @@ export type ContactPerson = {
 export type SafeguardingRep = {
   email: string;
   name: string;
+  phone?: string
 };
 
 export type OfficeHours = {

@@ -70,6 +70,13 @@
   /* ── Layout ── */
   --max-width: 1200px;
   --nav-height: 120px;
+
+  /* Distance from the vertical center of a full-height nav item down to
+     where its dropdown should open. .navLink is stretched to the full
+     --nav-height as a hover target, so the dropdown can't just use
+     top: 100% of that box — it needs to sit just under the visible
+     link text instead, which sits near the middle of that tall box. */
+  --nav-dropdown-offset: 1.75rem;
 }
 
 /* ─── Reset ─────────────────────────────────────────────────────────────────── */

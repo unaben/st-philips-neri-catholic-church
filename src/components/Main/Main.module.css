@@ -82,6 +82,7 @@
   display: flex;
   align-items: flex-start;
   gap: var(--space-md);
+  
   text-align: left;
   background: var(--color-accent-tint);
   border: 1px solid var(--color-border);
@@ -99,7 +100,7 @@
 .streamingBox strong {
   display: block;
   font-family: var(--font-display);
-  font-size: 0.85rem;
+  font-size: 1rem;
   letter-spacing: 0.02em;
   text-transform: uppercase;
   color: var(--color-accent);
@@ -107,7 +108,7 @@
 }
 
 .streamingBox p {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--color-text-muted);
   line-height: 1.6;
 }
@@ -231,70 +232,6 @@
 
 .privacyLink:hover {
   color: var(--color-accent);
-}
-
-.visitGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: var(--space-lg);
-}
-
-.visitCard {
-  background: var(--color-accent-tint);
-  border: 1px solid var(--color-border);
-  padding: var(--space-lg);
-  text-align: center;
-}
-
-.visitLabel {
-  display: block;
-  font-family: var(--font-display);
-  font-size: 0.7rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--color-text-muted);
-  margin-bottom: var(--space-sm);
-}
-
-.addressText {
-  font-style: normal;
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--color-dark);
-  line-height: 1.6;
-  margin-bottom: 0.5rem;
-}
-
-.visitValue {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--color-dark);
-  line-height: 1.5;
-}
-
-.visitNote {
-  font-size: 0.82rem;
-  color: var(--color-text-muted);
-  margin-top: 0.3rem;
-}
-
-.visitLink {
-  display: inline-block;
-  font-size: 0.9rem;
-  color: var(--color-accent-mid);
-  text-decoration: none;
-}
-
-.visitLink:hover {
-  color: var(--color-accent);
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
-
-.socialLinks {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
 }
 
 .ctaRow {

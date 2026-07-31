@@ -1,9 +1,11 @@
 import Link from "next/link";
-import type { MainSectionProps, SafeguardingRep } from "./Main.types";
 import ContentWrap from "@/components/ContentWrap/ContentWrap";
 import ContactCard from "./components/ContactCard/ContactCard";
 import StaffCard from "./components/StaffCard/StaffCard";
+import VisitSection from "./components/VisitSection/VisitSection";
+import type { MainSectionProps, SafeguardingRep } from "./Main.types";
 import styles from "./Main.module.css";
+import staffCardStyles from "./components/StaffCard/StaffCard.module.css";
 
 export default function MainSection(props: MainSectionProps) {
   const {
@@ -23,7 +25,7 @@ export default function MainSection(props: MainSectionProps) {
       <div className={styles.accentBar} aria-hidden="true" />
       <div className={styles.intro}>
         <ContentWrap className={styles.introInner}>
-        <div className={styles.accentBar} aria-hidden="true" />
+          <div className={styles.accentBar} aria-hidden="true" />
           <div className={styles.rainbowBar} />
           <span className={styles.badge}>Archdiocese of Birmingham</span>
           <h1 className={styles.title}>
@@ -59,12 +61,15 @@ export default function MainSection(props: MainSectionProps) {
           <h2 id="priests-heading" className={styles.sectionHeading}>
             Our Clergy
           </h2>
-          <div className={styles.priestsGrid}>
+          <ul className={styles.priestsGrid}>
             {priests.map((p, i) => (
-              <ContactCard key={p.email} person={p} featured={i === 0} />
+              <li key={p.email}>
+                <ContactCard person={p} featured={i === 0} />
+              </li>
             ))}
-          </div>
+          </ul>
         </section>
+
         <section aria-labelledby="staff-heading" className={styles.section}>
           <h2 id="staff-heading" className={styles.sectionHeading}>
             Parish Staff
@@ -75,6 +80,7 @@ export default function MainSection(props: MainSectionProps) {
             ))}
           </div>
         </section>
+
         <section
           aria-labelledby="safeguarding-heading"
           className={styles.section}
@@ -86,16 +92,25 @@ export default function MainSection(props: MainSectionProps) {
             >
               Parish Safeguarding Representatives
             </h2>
-            <div className={styles.safeguardingReps}>
+            <ul className={styles.safeguardingReps}>
               {safeguardingReps.map((rep: SafeguardingRep) => (
-                <p key={rep.email} className={styles.safeguardingRep}>
-                  <Link href={`mailto:${rep.email}`}>{rep.email}</Link>
-                  <span> — {rep.name}</span>
-                </p>
+                <li key={rep.email}>
+                  <h3 className={staffCardStyles.name}>{rep.name}</h3>
+                  <Link
+                    href={`mailto:${rep.email}`}
+                    className={staffCardStyles.email}
+                  >
+                    {rep.email}
+                  </Link>
+                  <p className={staffCardStyles.name}>{rep.phone}</p>
+                </li>
               ))}
-            </div>
+            </ul>
             <div className={styles.safeguardingLinks}>
-              <Link href="/safeguarding" className={styles.safeguardingCta}>
+              <Link
+                href="/about/safeguarding"
+                className={styles.safeguardingCta}
+              >
                 Read our safeguarding policy →
               </Link>
               <Link
@@ -109,73 +124,14 @@ export default function MainSection(props: MainSectionProps) {
             </div>
           </div>
         </section>
-        <section aria-labelledby="visit-heading" className={styles.section}>
-          <h2 id="visit-heading" className={styles.sectionHeading}>
-            Visit Us
-          </h2>
-          <div className={styles.visitGrid}>
-            <div className={styles.visitCard}>
-              <span className={styles.visitLabel}>Address</span>
-              <address className={styles.addressText}>
-                {address.street}
-                <br />
-                {address.city}
-                <br />
-                {address.postcode}
-              </address>
-              <Link
-                href={`tel:${address.tel.replace(/\s/g, "")}`}
-                className={styles.visitLink}
-              >
-                {address.tel}
-              </Link>
-            </div>
 
-            <div className={styles.visitCard}>
-              <span className={styles.visitLabel}>Office Hours</span>
-              <p className={styles.visitValue}>{officeHours.label}</p>
-              {officeHours.note && (
-                <p className={styles.visitNote}>{officeHours.note}</p>
-              )}
-            </div>
-            <div className={styles.visitCard}>
-              <span className={styles.visitLabel}>Connect</span>
-              <div className={styles.socialLinks}>
-                {social.email && (
-                  <Link
-                    href={`mailto:${social.email}`}
-                    className={styles.visitLink}
-                  >
-                    {social.email}
-                  </Link>
-                )}
-                {social.facebook && (
-                  <Link
-                    href={`https://facebook.com/${social.facebook}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.visitLink}
-                  >
-                    Facebook · {social.facebook}
-                  </Link>
-                )}
-                {social.twitter && (
-                  <Link
-                    href={`https://twitter.com/${social.twitter.replace(
-                      "@",
-                      ""
-                    )}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.visitLink}
-                  >
-                    Twitter · {social.twitter}
-                  </Link>
-                )}
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* Reusable Visit Section Component */}
+        <VisitSection
+          address={address}
+          officeHours={officeHours}
+          social={social}
+        />
+
         <div className={styles.ctaRow}>
           <Link
             target="_blank"
