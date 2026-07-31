@@ -15,7 +15,6 @@ export const navLinks: NavLink[] = [
     priority: true,
     children: [
       { label: "About Us", href: "/about/about-us" },
-      { label: "Confession", href: "/about/confession" },
       { label: "Contact Us", href: "/about/contact" },
       { label: "How do I register in the Parish?", href: "/about/register" },
       { label: "Mass Booking", href: "/about/mass-booking" },
@@ -61,7 +60,8 @@ export const navLinks: NavLink[] = [
     children: [
       { label: "Adult Confirmation", href: "/sacramental/adult-confirmation" },
       { label: "Baptism", href: "/sacramental/baptism" },
-      { label: "Confirmation", href: "/sacramental/confirmation" },
+      { label: "Confession", href: "/sacramental/confession" },
+      { label: "Confirmation", href: "/sacramental/confirmation" },      
       {
         label: "First Holy Communion",
         href: "/sacramental/first-holy-communion",

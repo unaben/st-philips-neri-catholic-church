@@ -39,7 +39,6 @@
   align-items: start;
 }
 
-/* Info Column & List */
 .infoCol {
   display: flex;
   flex-direction: column;
@@ -94,7 +93,7 @@
 .infoText {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centers children horizontally */
+  align-items: center;
   text-align: center;
   gap: 2px;
   min-width: 0;
@@ -119,7 +118,6 @@
   word-break: break-word;
 }
 
-/* Clickable Links & Multi-Value Containers */
 .infoLink {
   font-size: 0.97rem;
   font-weight: 600;
@@ -140,7 +138,7 @@
 .multiValueGroup {
   display: flex;
   align-items: center;
-  justify-content: center; /* Centers the phone links horizontally */
+  justify-content: center;
   gap: 8px;
   flex-wrap: wrap;
   width: 100%;
@@ -153,7 +151,6 @@
   pointer-events: none;
 }
 
-/* Form Column */
 .formCol {
   width: 100%;
   display: flex;
@@ -196,6 +193,7 @@
   flex-direction: column;
   gap: 6px;
   min-width: 0;
+  text-align: left;
 }
 
 .label {
@@ -370,14 +368,12 @@
   color: var(--color-white);
 }
 
-/* Responsive Media Queries */
 @media (max-width: 900px) {
   .bottomSection {
     grid-template-columns: 1fr;
     gap: var(--space-xl);
   }
 
-  /* Moves key contact details above form for mobile visitors */
   .infoCol {
     order: -1;
   }
