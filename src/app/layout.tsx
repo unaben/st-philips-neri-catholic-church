@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Metadata, Viewport } from "next";
 import Footer from "@/components/layout/Footer/Footer";
 import Navbar from "@/components/layout/Navbar/Navbar";
@@ -45,9 +46,9 @@ export default function RootLayout({
   return (
     <html lang="en-GB">
       <body>
-        <a href="#main-content" className="sr-only">
+        <Link href="#main-content" className="sr-only">
           Skip to main content
-        </a>
+        </Link>
         <Navbar />
         <main id="main-content">{children}</main>
         <Footer />
