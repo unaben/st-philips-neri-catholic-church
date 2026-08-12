@@ -1,0 +1,157 @@
+.form {
+  max-width: var(--parish-max-width);
+  margin: 0 auto;
+  padding: var(--parish-space-5);
+  background: var(--parish-surface);
+  border: 1px solid var(--parish-border);
+  border-radius: var(--parish-radius);
+  font-family: var(--parish-font-body);
+  color: var(--parish-text);
+}
+
+.parishAddress {
+  font-size: 0.8rem;
+  color: var(--parish-muted);
+  margin-bottom: 0.25rem;
+}
+
+.heading {
+  font-family: var(--parish-font-heading);
+  font-size: 1.4rem;
+  color: var(--parish-primary);
+  margin-bottom: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 1.5rem;
+}
+
+.spanFull {
+  grid-column: 1 / -1;
+}
+
+.fieldset {
+  border: 1px solid var(--parish-border);
+  border-radius: var(--parish-radius);
+  padding: 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.fieldsetError {
+  border-color: var(--parish-error);
+}
+
+.legend {
+  font-weight: 600;
+  padding: 0 0.5rem;
+  color: var(--parish-primary);
+}
+
+.radioGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.radioPill {
+  border: 1px solid var(--parish-border);
+  background: transparent;
+  color: var(--parish-text);
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.radioPillSelected {
+  background: var(--parish-primary);
+  border-color: var(--parish-primary);
+  color: var(--parish-primary-contrast);
+}
+
+.conditionalField {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px dashed var(--parish-border);
+}
+
+.checkboxRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 0.75rem;
+  cursor: pointer;
+  text-align: start;
+}
+
+.checkboxRow input {
+  margin-top: 0.2rem;
+  flex: 0 0 1.05rem;
+  width: 1.05rem;
+  height: 1.05rem;
+}
+
+.signatureRow {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.error {
+  font-size: 0.8rem;
+  color: var(--parish-error);
+  margin: 0.25rem 0 0;
+}
+
+.serverError {
+  color: var(--parish-error);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.submitButton {
+  background: var(--parish-primary);
+  color: var(--parish-primary-contrast);
+  border: none;
+  border-radius: var(--parish-radius);
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.submitButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.successBanner {
+  max-width: var(--parish-max-width);
+  margin: 0 auto;
+  padding: var(--parish-space-5);
+  background: var(--parish-surface);
+  border: 1px solid var(--parish-success);
+  border-radius: var(--parish-radius);
+  color: var(--parish-success);
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .grid,
+  .signatureRow {
+    grid-template-columns: 1fr;
+  }
+
+  .heading {
+    font-size: 1.2rem;
+  }
+
+  .fieldset {
+    padding: 0.85rem;
+  }
+}
