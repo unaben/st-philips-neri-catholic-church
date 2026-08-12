@@ -1,0 +1,100 @@
+.card {
+  background: var(--color-card-bg);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg) var(--space-xl);
+  text-align: left;
+}
+
+.cardAdmin {
+  padding: var(--space-md) var(--space-lg);
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  line-height: 1.3;
+  margin: 0;
+  text-align: left;
+}
+
+.cardAdmin .title {
+  font-size: 1.05rem;
+}
+
+.date {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-top: 0.2em;
+}
+
+.plainText {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  margin: 0 0 var(--space-xs);
+  text-align: left;
+}
+
+.richText {
+  color: var(--color-text);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.richText :global(ul),
+.richText :global(ol) {
+  padding-left: 1.4rem;
+}
+
+.richText :global(a) {
+  color: var(--color-accent-mid);
+}
+
+.actions {
+  display: flex;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+}
+
+.editButton,
+.deleteButton {
+  border-radius: var(--radius-sm);
+  padding: var(--space-xs) var(--space-md);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: background-color var(--transition-fast);
+}
+
+.editButton {
+  background: var(--color-accent-tint);
+  color: var(--color-accent-mid);
+  border-color: var(--color-accent-tint2);
+}
+
+.editButton:hover {
+  background: var(--color-accent-tint2);
+}
+
+.deleteButton {
+  background: #fef3f2;
+  color: var(--color-error);
+  border-color: #fecdca;
+}
+
+.deleteButton:hover {
+  background: #fee4e2;
+}
