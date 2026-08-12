@@ -13,7 +13,14 @@
     "next": "16.2.3",
     "react": "19.2.4",
     "react-dom": "19.2.4",
-    "resend": "^6.10.0"
+    "resend": "^6.10.0",
+    "sanitize-html": "^2.13.1",
+    "@tiptap/extension-link": "^2.9.1",
+    "@tiptap/extension-placeholder": "^2.9.1",
+    "@tiptap/pm": "^2.9.1",
+    "@tiptap/react": "^2.9.1",
+    "@tiptap/starter-kit": "^2.9.1",
+    "@vercel/kv": "^3.0.0"
   },
   "devDependencies": {
     "@types/node": "^20",
@@ -21,6 +28,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.3",
-    "typescript": "^5"
+    "typescript": "^5",
+     "@types/sanitize-html": "^2.13.0"
   }
 }
