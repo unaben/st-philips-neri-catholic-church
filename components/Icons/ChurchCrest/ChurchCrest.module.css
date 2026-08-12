@@ -1,0 +1,11 @@
+.crestNav {
+  width: 100%;
+  height: 100%;
+}
+
+.crestSvg {
+  width: 44px;
+  height: 56px;
+  flex-shrink: 0;
+  opacity: 0.9;
+}
