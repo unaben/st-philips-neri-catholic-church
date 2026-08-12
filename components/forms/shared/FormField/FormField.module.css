@@ -1,0 +1,35 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  margin-bottom: 1.25rem;
+}
+
+.label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--parish-text);
+  text-align: start;
+}
+
+.required {
+  color: var(--parish-error);
+}
+
+.hint {
+  font-size: 0.8rem;
+  color: var(--parish-muted);
+  margin: 0;
+}
+
+.error {
+  font-size: 0.8rem;
+  color: var(--parish-error);
+  margin: 0;
+}
+
+.fieldError :global(input),
+.fieldError :global(select),
+.fieldError :global(textarea) {
+  border-color: var(--parish-error);
+}

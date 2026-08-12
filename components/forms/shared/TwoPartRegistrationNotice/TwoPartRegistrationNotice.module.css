@@ -1,0 +1,14 @@
+.notice {
+  background: var(--parish-bg);
+  border: 1px solid var(--parish-border);
+  border-left: 4px solid var(--parish-primary);
+  border-radius: var(--parish-radius-sm);
+  padding: 0.85rem 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.text {
+  font-size: 0.85rem;
+  color: var(--parish-muted);
+  line-height: 1.5;
+}

@@ -1,0 +1,50 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  margin-bottom: 1.25rem;
+  padding: 1rem 1rem 0.75rem;
+  border: 1px dashed var(--parish-border);
+  border-radius: 6px;
+}
+
+.label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--parish-text);
+}
+
+.required {
+  color: var(--parish-error);
+}
+
+.signatureInput {
+  font-family: italic;
+  font-size: 2.25rem;
+  padding: 0.5rem 0.25rem;
+  line-height: 1.3;
+  border: none;
+  background: transparent;
+  color: var(--parish-text);
+}
+
+.signatureInput:focus {
+  outline: none;
+  border-bottom-color: var(--parish-text);
+}
+
+.wrapperError .signatureInput {
+  border-bottom-color: var(--parish-error);
+}
+
+.caption {
+  font-size: 0.75rem;
+  color: var(--parish-muted);
+  margin: 0;
+}
+
+.error {
+  font-size: 0.8rem;
+  color: var(--parish-error);
+  margin: 0;
+}
