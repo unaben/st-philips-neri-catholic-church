@@ -1,0 +1,150 @@
+.form {
+  max-width: var(--parish-max-width);
+  margin: 0 auto;
+  padding: var(--parish-space-5);
+  background: var(--parish-surface);
+  border: 1px solid var(--parish-border);
+  border-radius: var(--parish-radius);
+  font-family: var(--parish-font-body);
+  color: var(--parish-text);
+}
+
+.heading {
+  font-family: var(--parish-font-heading);
+  font-size: 1.4rem;
+  color: var(--parish-primary);
+  margin-bottom: 0.25rem;
+}
+
+.subheading {
+  font-size: 0.85rem;
+  color: var(--parish-muted);
+  margin-bottom: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 1.5rem;
+}
+
+.fieldset {
+  border: 1px solid var(--parish-border);
+  border-radius: var(--parish-radius);
+  padding: 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.legend {
+  font-weight: 600;
+  padding: 0 0.5rem;
+  color: var(--parish-primary);
+}
+
+.radioGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.radioGroupError {
+  outline: 1px solid var(--parish-error);
+  border-radius: var(--parish-radius-sm);
+}
+
+.radioPill {
+  border: 1px solid var(--parish-border);
+  background: transparent;
+  color: var(--parish-text);
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.radioPillSelected {
+  background: var(--parish-primary);
+  border-color: var(--parish-primary);
+  color: var(--parish-primary-contrast);
+}
+
+.conditionalField {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px dashed var(--parish-border);
+}
+
+.petitionText {
+  font-size: 0.9rem;
+  color: var(--parish-text);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.signatureRow {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.officeNote {
+  font-size: 0.8rem;
+  color: var(--parish-muted);
+  margin-top: 0.5rem;
+}
+
+.error {
+  font-size: 0.8rem;
+  color: var(--parish-error);
+  margin: 0 0 0.75rem;
+}
+
+.serverError {
+  color: var(--parish-error);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.submitButton {
+  background: var(--parish-primary);
+  color: var(--parish-primary-contrast);
+  border: none;
+  border-radius: var(--parish-radius);
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.submitButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.successBanner {
+  max-width: var(--parish-max-width);
+  margin: 0 auto;
+  padding: var(--parish-space-5);
+  background: var(--parish-surface);
+  border: 1px solid var(--parish-success);
+  border-radius: var(--parish-radius);
+  color: var(--parish-success);
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .grid,
+  .signatureRow {
+    grid-template-columns: 1fr;
+  }
+
+  .heading {
+    font-size: 1.2rem;
+  }
+
+  .fieldset {
+    padding: 0.85rem;
+  }
+}
