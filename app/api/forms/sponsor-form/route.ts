@@ -1,11 +1,7 @@
 import { Resend } from "resend";
 import { NextRequest, NextResponse } from "next/server";
 import { sendResendEmail } from "@/components/forms/shared/resendSend";
-import { SponsorFormData } from "@/components/forms/SponsorForm/SponsorForm.types";
-import {
-  validateSponsorForm,
-  SACRAMENT_LABEL,
-} from "@/components/forms/SponsorForm/SponsorForm.utils";
+import type { SponsorFormData } from "@/components/forms/SponsorForm/SponsorForm.types";
 import { hasErrors } from "@/components/forms/shared/validation";
 import {
   renderCallout,
@@ -15,6 +11,8 @@ import {
 } from "@/components/forms/shared/emailTemplate";
 import { registrationStore } from "@/lib/storage/registrationStore";
 import { generateReferenceId } from "@/components/forms/shared/submissionId";
+import { SACRAMENT_LABEL } from "@/components/forms/SponsorForm/constants";
+import { validateSponsorForm } from "@/components/forms/SponsorForm/SponsorForm.utils";
 
 // ── TODO: replace with verified domain sender before going live ──────────────
 // Once you verify a domain in Resend, set FROM_EMAIL in .env to something like

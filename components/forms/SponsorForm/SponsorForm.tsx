@@ -1,25 +1,16 @@
 "use client";
 
 import classNames from "classnames";
+import { SACRAMENT_LABEL } from "./constants";
 import { FormField } from "../shared/FormField/FormField";
 import { SignatureField } from "../shared/SignatureField/SignatureField";
 import { SponsorFormBanner } from "../shared/SponsorFormBanner/SponsorFormBanner";
 import { useSponsorForm } from "./hooks/useSponsorForm";
-import type { Sacrament } from "@/types/registration";
+import type { SponsorFormProps } from "./SponsorForm.types";
 import styles from "./SponsorForm.module.css";
-import { SACRAMENT_LABEL } from "./constants";
 
-interface SponsorFormProps {
-  sacrament?: Sacrament;
-  enrolmentId?: string;
-  candidateName?: string;
-}
-
-export function SponsorForm({
-  sacrament,
-  enrolmentId,
-  candidateName,
-}: SponsorFormProps = {}) {
+export function SponsorForm(props: SponsorFormProps = {}) {
+  const { sacrament, enrolmentId, candidateName } = props;
   const {
     formData,
     errors,

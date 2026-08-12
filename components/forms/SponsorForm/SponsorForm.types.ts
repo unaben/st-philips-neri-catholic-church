@@ -18,3 +18,9 @@ export interface SponsorFormData {
 export type SponsorFormFieldErrors = Partial<
   Record<keyof SponsorFormData, string>
 >;
+
+export interface SponsorFormProps {
+  sacrament?: Sacrament;
+  enrolmentId?: string;
+  candidateName?: string;
+}
