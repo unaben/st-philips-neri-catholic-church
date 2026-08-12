@@ -1,0 +1,72 @@
+.wrapper {
+  border: 1px solid var(--color-admin-border);
+  border-radius: 8px;
+  background: var(--color-white);
+  overflow: hidden;
+}
+
+.wrapperError {
+  border-color: var(--color-admin-danger);
+}
+
+.toolbar {
+  display: flex;
+  gap: 4px;
+  padding: 6px 8px;
+  border-bottom: 1px solid var(--color-admin-border-light);
+  background: var(--color-admin-surface);
+}
+
+.toolbarButton {
+  min-width: 32px;
+  height: 32px;
+  padding: 0 8px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--color-admin-text-secondary);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.toolbarButton:hover {
+  background: var(--color-admin-border-light);
+}
+
+.toolbarButtonActive {
+  background: var(--color-admin-link-tint);
+  border-color: var(--color-admin-link-tint-border);
+  color: var(--color-admin-link);
+}
+
+.editorContent {
+  min-height: 160px;
+  padding: 12px 14px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--color-admin-text);
+  outline: none;
+}
+
+.editorContent :global(p.is-editor-empty:first-child)::before {
+  content: attr(data-placeholder);
+  color: var(--color-admin-placeholder);
+  float: left;
+  height: 0;
+  pointer-events: none;
+}
+
+.editorContent :global(ul),
+.editorContent :global(ol) {
+  padding-left: 1.4rem;
+}
+
+.editorContent :global(a) {
+  color: var(--color-admin-link);
+  text-decoration: underline;
+}
+
+.editorFallback {
+  min-height: 200px;
+}
