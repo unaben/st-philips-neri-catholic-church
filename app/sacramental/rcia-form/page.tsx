@@ -6,17 +6,12 @@ import styles from "./rciaForm.module.css";
 const AdultConfirmationPage = () => {
   return (
     <>
-      <Hero
-        title="The Rite of Christian Initiation for Adults"
-        imgUrl="/images/psalm23.webp"
-      />
+      <Hero title="RCIA – Becoming a Catholic" imgUrl="/images/psalm23.webp" />
       <ContentWrap as="div" className={styles.body}>
         <div className={styles.accentBar} aria-hidden="true" />
         <div className={styles.intro}>
           <div className={styles.rainbowBar} />
-          <span className={styles.badge}>
-            The Rite of Christian Initiation for Adults
-          </span>
+          <span className={styles.badge}>RCIA Form</span>
           <RCIAApplication />
         </div>
       </ContentWrap>
