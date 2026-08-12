@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { sendResendEmail } from "@/components/forms/shared/resendSend";
 import { isValidEmail, isRequired } from "@/components/forms/shared/validation";
 import { renderEmailShell } from "@/components/forms/shared/emailTemplate";
-import type { Sacrament } from "@/types/registration";
+import { SACRAMENT_LABEL } from "@/components/forms/SponsorForm/constants";
 
 /**
  * Emails a link back to the Godparent/Sponsor form for someone who
@@ -17,11 +17,6 @@ import type { Sacrament } from "@/types/registration";
 const FROM_ADDRESS = "onboarding@resend.dev";
 const ACCENT = "#7a1f2b";
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
-
-const SACRAMENT_LABEL: Record<Sacrament, string> = {
-  confirmation: "Confirmation",
-  firstHolyCommunion: "First Holy Communion",
-};
 
 interface Body {
   email?: unknown;

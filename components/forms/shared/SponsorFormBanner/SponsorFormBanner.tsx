@@ -1,10 +1,6 @@
-import styles from "./SponsorFormBanner.module.css";
+import { SACRAMENT_LABEL } from "../../SponsorForm/constants";
 import type { Sacrament } from "@/types/registration";
-
-const SACRAMENT_LABEL: Record<Sacrament, string> = {
-  confirmation: "Confirmation",
-  firstHolyCommunion: "First Holy Communion",
-};
+import styles from "./SponsorFormBanner.module.css";
 
 interface SponsorFormBannerProps {
   candidateName?: string;

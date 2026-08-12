@@ -6,7 +6,6 @@ import {
   isValidEmail,
   isValidPhone,
 } from "../shared/validation";
-import type { Sacrament } from "@/types/registration";
 
 export function createEmptySponsorForm(
   initial?: Partial<
