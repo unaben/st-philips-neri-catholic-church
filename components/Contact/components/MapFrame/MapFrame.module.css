@@ -1,0 +1,249 @@
+.wrap {
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.preview {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--space-xl);
+  padding: var(--space-xl) var(--space-2xl);
+  background: var(--color-white);
+  min-height: 140px;
+}
+
+.previewPattern {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+      120deg,
+      var(--color-accent-tint) 0%,
+      transparent 55%
+    ),
+    repeating-linear-gradient(
+      45deg,
+      var(--color-accent-tint2) 0px,
+      var(--color-accent-tint2) 1px,
+      transparent 1px,
+      transparent 26px
+    );
+  opacity: 0.6;
+}
+
+.previewIconCol {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--color-accent-tint);
+  border: 1px solid var(--color-accent-tint2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.previewIcon {
+  font-size: 1.5rem;
+}
+
+.previewBody {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  min-width: 0;
+}
+
+.previewEyebrow {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent-mid);
+}
+
+.previewAddress {
+  display: flex;
+  flex-direction: column;
+  font-style: normal;
+  font-size: 0.95rem;
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+.previewActions {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  flex-shrink: 0;
+}
+
+.btnPrimary,
+.btnSecondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.7rem 1.4rem;
+  transition: background var(--transition-fast), color var(--transition-fast),
+    border-color var(--transition-fast), transform var(--transition-fast);
+  text-decoration: none;
+}
+
+.btnPrimary {
+  color: var(--color-white);
+  background: var(--color-accent);
+  border: 1px solid var(--color-accent);
+}
+
+.btnPrimary:hover {
+  background: var(--color-accent-mid);
+  border-color: var(--color-accent-mid);
+  transform: translateY(-1px);
+}
+
+.btnSecondary {
+  color: var(--color-charcoal);
+  background: transparent;
+  border: 1px solid var(--color-border);
+}
+
+.btnSecondary:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.frameStage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 7;
+}
+
+.iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  opacity: 0;
+  transition: opacity var(--transition-slow);
+}
+
+.iframeVisible {
+  opacity: 1;
+}
+
+.skeleton {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  background: linear-gradient(
+    135deg,
+    var(--color-accent-tint) 0%,
+    var(--color-bg) 60%
+  );
+}
+
+.skeletonShimmer {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    100deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.5) 50%,
+    transparent 70%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.8s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  from {
+    background-position: 150% 0;
+  }
+  to {
+    background-position: -50% 0;
+  }
+}
+
+.skeletonPin {
+  font-size: 1.8rem;
+  z-index: 1;
+  animation: bob 1.6s ease-in-out infinite;
+}
+
+@keyframes bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.skeletonLabel {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  z-index: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeletonShimmer,
+  .skeletonPin {
+    animation: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .preview {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding: var(--space-lg);
+    gap: var(--space-md);
+  }
+
+  .previewBody {
+    text-align: left;
+  }
+
+  .previewActions {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .btnPrimary,
+  .btnSecondary {
+    flex: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .previewActions {
+    flex-direction: column;
+  }
+}
