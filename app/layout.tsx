@@ -1,9 +1,9 @@
 import Link from "next/link";
 import type { Metadata, Viewport } from "next";
 import Footer from "@/components/layout/Footer/Footer";
-import Navbar from "@/components/layout/Navbar/Navbar";
-import "@/styles/globals.css";
 import RenderNavbar from "@/components/RenderNavbar";
+import "@/styles/globals.css";
+
 
 export const metadata: Metadata = {
   title: {

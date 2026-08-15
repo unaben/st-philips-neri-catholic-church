@@ -1,7 +1,8 @@
 export interface NavLink {
   label: string;
   href: string;
-  priority?: boolean; 
+  priority?: boolean;
+  icon?: React.ReactNode; 
   children?: NavLink[];
 }
 

@@ -2,9 +2,10 @@
 
 import Link from "next/link";
 import cn from "classnames";
-import { navLinks, donateLink } from "@/data";
+import { donateLink } from "@/data";
 import { ChurchCrest } from "@/components/Icons/ChurchCrest";
 import useNavbar from "./hooks/useNavbar";
+import { navLinks } from "./navLinks";
 import type { NavLink } from "@/types";
 import styles from "./Navbar.module.css";
 
@@ -63,7 +64,12 @@ export default function Navbar() {
                   e.currentTarget.blur();
                 }}
               >
-                {child.label}
+                {child.icon && (
+                  <span className={styles.dropdownIcon} aria-hidden="true">
+                    {child.icon}
+                  </span>
+                )}
+                <span className={styles.dropdownLabel}>{child.label}</span>
               </Link>
             </li>
           ))}
@@ -110,7 +116,12 @@ export default function Navbar() {
                 className={styles.mobileSubLink}
                 onClick={closeMenu}
               >
-                {child.label}
+                {child.icon && (
+                  <span className={styles.dropdownIcon} aria-hidden="true">
+                    {child.icon}
+                  </span>
+                )}
+                <span className={styles.dropdownLabel}>{child.label}</span>
               </Link>
             ))}
           </div>

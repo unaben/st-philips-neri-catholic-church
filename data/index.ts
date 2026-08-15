@@ -1,5 +1,4 @@
 import type {
-  NavLink,
   HeroSlide,
   QuickLink,
   FeaturedItem,
@@ -7,69 +6,6 @@ import type {
   FooterQuickLink,
   SocialLink,
 } from "@/types";
-
-export const navLinks: NavLink[] = [
-  {
-    label: "About",
-    href: "#",
-    priority: true,
-    children: [
-      { label: "About Us", href: "/about/about-us" },
-      { label: "Contact Us", href: "/about/contact" },
-      { label: "How do I register in the Parish?", href: "/about/register" },
-      { label: "Mass Booking", href: "/about/mass-booking" },
-      { label: "Safeguarding", href: "/about/safeguarding" },
-      {
-        label:
-          "Signing of the certificate of Catholic Practice (CCP) for Catholic schools",
-        href: "/about/Signing-schools-certificate",
-      },
-      {
-        label: "Streamed Masses across the Diocese",
-        href: "/about/streamed-masses-across-the-diocese",
-      },
-      { label: "Subscribe", href: "/about/subscribe" },
-    ],
-  },
-  { label: "Mass Times", href: "/mass-times", priority: true },
-  {
-    label: "News & Events",
-    href: "#",
-    priority: false,
-    children: [
-      { label: "Announcements", href: "/news-and-events/announcements" },
-      { label: "Blog", href: "/news-and-events/blog" },
-      { label: "Events", href: "/news-and-events/events" },
-      { label: "News", href: "/news-and-events/news" },
-    ],
-  },
-  {
-    label: "Parish Groups",
-    href: "#",
-    priority: false,
-    children: [
-      { label: "Legion of Mary", href: "/parish-groups/legion-of-mary" },
-      { label: "Mass servers", href: "/parish-groups/mass-server" },
-      { label: "Our choir", href: "/parish-groups/choir" },
-    ],
-  },
-  {
-    label: "Sacramental",
-    href: "#",
-    priority: true,
-    children: [
-      { label: "Baptism", href: "/sacramental/baptism" },
-      { label: "Confession", href: "/sacramental/confession" },
-      { label: "Confirmation", href: "/sacramental/confirmation" },      
-      {
-        label: "First Holy Communion",
-        href: "/sacramental/first-holy-communion",
-      },
-      { label: "Marriage", href: "/sacramental/marriage" },
-      { label: "RCIA", href: "/sacramental/become-a-catholic" },
-    ],
-  },
-];
 
 export const donateLink = {
   label: "Donate",
