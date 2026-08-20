@@ -3,7 +3,18 @@
   overflow-x: hidden;
 }
 
+.accentBar {
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(
+    to right,
+    var(--color-accent-tint),
+    var(--color-accent),
+    var(--color-accent-tint)
+  );
+}
+
 .body {
-  padding-top: var(--space-3xl);
+  padding-top: var(--space-2xl);
   padding-bottom: var(--space-3xl);
 }

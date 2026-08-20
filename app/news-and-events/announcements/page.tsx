@@ -11,8 +11,8 @@ const AnnouncementPage = async () => {
   return (
     <>
       <Hero title="Parish Announcements" imgUrl="/images/psalm23.webp" />
-      <ContentWrap as="div" className={styles.body}>
-        <div className={styles.accentBar} aria-hidden="true" />
+      <div className={styles.accentBar} aria-hidden="true" />
+      <ContentWrap as="div" className={styles.body}>       
         <div className={styles.intro}>
           <div className={styles.rainbowBar} />
           <span className={styles.badge}>Registration</span>

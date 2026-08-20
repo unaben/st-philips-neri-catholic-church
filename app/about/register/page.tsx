@@ -7,8 +7,8 @@ const RegisterPage = () => {
   return (
     <>
       <Hero title="Registration" imgUrl="/images/rosary_on_bible.webp" />
-      <ContentWrap as="div" className={styles.body}>
-        <div className={styles.accentBar} aria-hidden="true" />
+      <div className={styles.accentBar} aria-hidden="true" />
+      <ContentWrap as="div" className={styles.body}>        
         <div className={styles.intro}>
           <div className={styles.rainbowBar} />
           <span className={styles.badge}>Registration</span>

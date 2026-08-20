@@ -7,6 +7,7 @@ const safeguardingPage = () => {
   return (
     <div className={styles.page}>
       <Hero title="Safeguarding" imgUrl="/images/safeguarding.webp" />
+      <div className={styles.accentBar} aria-hidden="true" />
       <ContentWrap as="div" className={styles.body}>
         <SafeguardingPage />
       </ContentWrap>

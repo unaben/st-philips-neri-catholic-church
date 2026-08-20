@@ -10,8 +10,8 @@
 }
 .intro {
   background: var(--color-bg);
-  padding-top: var(--space-3xl);
-  padding-bottom: var(--space-2xl);
+  padding-top: var(--space-2xl);
+  padding-bottom: var(--space-3xl);
   text-align: center;
 }
 
@@ -41,7 +41,7 @@
   display: inline-flex;
   align-items: center;
   font-family: var(--font-display);
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
