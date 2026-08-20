@@ -24,7 +24,8 @@ export type SafeguardingRep = {
 };
 
 export type OfficeHours = {
-  label: string;
+  title: string;
+  time: string;
   note?: string;
 };
 
@@ -50,5 +51,4 @@ export type MainSectionProps = {
   privacyPolicyUrl: string;
   address: ChurchAddress;
   officeHours: OfficeHours;
-  social: SocialLinks;
 };

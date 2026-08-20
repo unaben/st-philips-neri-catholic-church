@@ -10,10 +10,10 @@ export default function PrivacyPolicy() {
 
   return (
     <>
-      <Hero title="Privacy Policy" imgUrl="/images/psalm23.webp" />
+      <Hero title="Privacy Policy" imgUrl="/images/privacy_policy.webp" />
+      <div className={styles.accentBar} aria-hidden="true" />
       <div className={styles.intro}>
-        <ContentWrap className={styles.introInner}>
-          <div className={styles.accentBar} aria-hidden="true" />
+        <ContentWrap className={styles.introInner}>          
           <div className={styles.rainbowBar} />
           <span className={styles.badge}>Data Protection</span>
           <h1 className={styles.title}>

@@ -21,8 +21,18 @@ export const MASS_SCHEDULE: MassScheduleGroup[] = [
     entries: [
       {
         days: "Tuesday",
+        location: "Parish",
+        time: "10:00am",
+      },
+      {
+        days: "Tuesday",
         location: "Parish - St Anthony Novena",
         time: "6:30pm",
+      },
+      {
+        days: "Tuesday",
+        location: "Parish",
+        time: "7:00am",
       },
     ],
   },
@@ -30,8 +40,8 @@ export const MASS_SCHEDULE: MassScheduleGroup[] = [
     id: "weekday",
     entries: [
       {
-        days: "Tuesday – Saturday",
-        location: "Parish",
+        days: "Wednesday, Friday, Saturday",
+        location: "Side chapel",
         time: "10:00am",
       },
     ],
@@ -42,7 +52,7 @@ export const MASS_SCHEDULE: MassScheduleGroup[] = [
       {
         days: "Thursday",
         location: "School",
-        time: "9:15am",
+        time: "10:00am",
       },
     ],
   },

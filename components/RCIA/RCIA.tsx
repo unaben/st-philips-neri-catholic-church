@@ -11,9 +11,9 @@ export default function RCIAPage() {
         title="Becoming a Catholic"
         imgUrl="/images/become-a-catholic.webp"
       />
+      <div className={styles.accentBar} aria-hidden="true" />
       <div className={styles.intro}>
-        <ContentWrap className={styles.introInner}>
-          <div className={styles.accentBar} aria-hidden="true" />
+        <ContentWrap className={styles.introInner}>          
           <div className={styles.rainbowBar} />
           <span className={styles.badge}>RCIA / OCIA</span>
           <h1 className={styles.title}>
@@ -21,28 +21,20 @@ export default function RCIAPage() {
             <span className={styles.titleUnderline} aria-hidden="true" />
           </h1>
           <p className={styles.leadText}>
-            The Rite of Christian Initiation of Adults (RCIA) — also known as
-            the Order of Christian Initiation of Adults (OCIA) — is the journey
+            The Rite of Christian Initiation of Adults (RCIA) also known as
+            the Order of Christian Initiation of Adults (OCIA) is the journey
             by which adults come into full communion with the Catholic Church.
-            Whether you&apos;ve never been baptized, come from another Christian
+            Whether you&apos;ve never been baptised, come from another Christian
             tradition, or simply have questions, you are warmly welcome to begin
             this journey with us at St. Philip Neri.
           </p>
-          <div className={styles.ctaGroup}>
-            <Link href="/about/contact" className={styles.btnSecondary}>
-              Start the Conversation
-            </Link>
-            <Link href="/sacramental/rcia-form" className={styles.btnPrimary}>
-              Fill Rcia form
-            </Link>
-          </div>
         </ContentWrap>
       </div>
       <ContentWrap as="section" className={styles.section}>
         <h2 className={styles.sectionHeading}>Is This Journey for You?</h2>
         <p className={styles.sectionIntro}>
           RCIA welcomes people from many different starting points. You might
-          recognize yourself in one of these:
+          recognise yourself in one of these:
         </p>
         <div className={styles.whoGrid}>
           {WHO_ITS_FOR.map(({ icon, title, description }) => (
@@ -61,9 +53,8 @@ export default function RCIAPage() {
           <h2 className={styles.sectionHeading}>The Journey, Step by Step</h2>
           <p className={styles.sectionIntro}>
             RCIA unfolds in six stages, walking you from first questions to full
-            communion with the Church — and beyond.
+            communion with the Church and beyond.
           </p>
-
           <ol className={styles.stagesList}>
             {JOURNEY.map(({ stage, title, timing, description }) => (
               <li key={stage} className={styles.stageItem}>
@@ -80,6 +71,20 @@ export default function RCIAPage() {
               </li>
             ))}
           </ol>
+          <div className={styles.midCta}>
+            <p className={styles.midCtaText}>
+              Ready to take the next step? Register your interest and we&apos;ll
+              be in touch to welcome you personally.
+            </p>
+            <div className={styles.ctaGroup}>
+              <Link href="/sacramental/rcia-form" className={styles.btnPrimary}>
+                Register Your Interest
+              </Link>
+              <Link href="/about/contact" className={styles.btnSecondary}>
+                Ask a Question First
+              </Link>
+            </div>
+          </div>
         </ContentWrap>
       </div>
       <ContentWrap as="section" className={styles.section}>
@@ -97,12 +102,20 @@ export default function RCIAPage() {
         <h2 className={styles.ctaTitle}>Take the First Step</h2>
         <p className={styles.ctaText}>
           By reading this far, you&apos;ve already taken the first step.
-          There&apos;s no obligation and no pressure — just an open door and a
+          There&apos;s no obligation and no pressure, just an open door and a
           welcoming parish family ready to walk this journey with you.
         </p>
         <div className={styles.ctaGroup}>
-          <Link href="/mass-times" className={styles.btnSecondary}>
+          <Link href="/mass-times" className={styles.btnPrimary}>
             Join Us for Mass
+          </Link>
+          <Link
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.liturgyoffice.org.uk/Resources/Rites/RCIA.pdf"
+            className={styles.btnSecondary}
+          >
+            Download the RCIA Document
           </Link>
         </div>
       </ContentWrap>

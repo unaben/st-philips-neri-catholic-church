@@ -1,9 +1,9 @@
 "use client";
 
+import Link from "next/link";
 import cn from "classnames";
 import { useActiveSection } from "./hooks/useActiveSection";
 import styles from "./PrivacyPolicy.module.css";
-import Link from "next/link";
 
 interface PolicyTocProps {
   entries: { id: string; title: string }[];

@@ -28,13 +28,15 @@ export const churchData: MainSectionProps = {
       name: "Elisabete Capela",
       email: "stphilips.smethwick@rcaob.org.uk",
       phone: "0121 558 1065",
-    }
+    },
   ],
 
   safeguardingReps: [
-    { name: "Wendell Gopaul",
+    {
+      name: "Wendell Gopaul",
       email: "safeguarding@rcaob.org.uk",
-      phone: "0121 533 9382 | 0121 234 6240", },
+      phone: "0121 533 9382 | 0121 234 6240",
+    },
   ],
 
   privacyPolicyUrl: "/about/privacy-policy",
@@ -47,12 +49,7 @@ export const churchData: MainSectionProps = {
   },
 
   officeHours: {
-    label: "Parish Office Hours: Friday 10:30AM – 2:30PM",
-  },
-
-  social: {
-    email: "stphilip.smethwick@rcaob.org.uk",
-    facebook: "Coming soon",
-    twitter: "Coming soon",
+    title: "Parish Office Hours:",
+    time: "Friday 10:30AM – 2:30PM",
   },
 };

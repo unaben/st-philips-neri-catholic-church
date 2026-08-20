@@ -8,9 +8,9 @@ export default function MassesPage() {
   return (
     <>
       <Hero title="Mass Times" imgUrl="/images/chalice.webp" />
+      <div className={styles.accentBar} aria-hidden="true" />
       <div className={styles.intro}>
-        <ContentWrap className={styles.introInner}>
-          <div className={styles.accentBar} aria-hidden="true" />
+        <ContentWrap className={styles.introInner}>          
           <div className={styles.rainbowBar} />
           <span className={styles.badge}>Join Us in Worship</span>
           <h1 className={styles.title}>
@@ -55,9 +55,9 @@ export default function MassesPage() {
           </span>
           <p className={styles.noteText}>
             <strong>Parish</strong> Masses are held in the main church on
-            Messenger Road. <strong>School</strong>{" "} Masses are held at St.
-            Philip&apos;s Catholic Primary School and are open to all
-            parishioners, not just the school community.
+            Messenger Road. <strong>School</strong> Masses are held at St.
+            Philip&apos;s Catholic Primary School and are open to just the
+            school community.
           </p>
         </div>
 

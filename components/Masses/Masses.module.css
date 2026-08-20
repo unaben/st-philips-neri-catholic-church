@@ -11,8 +11,7 @@
 
 .intro {
   background: var(--color-bg);
-  padding-top: var(--space-3xl);
-  padding-bottom: var(--space-2xl);
+  padding: var(--space-2xl) 0;
   text-align: center;
 }
 
@@ -26,7 +25,7 @@
 .rainbowBar {
   height: 5px;
   width: 120px;
-  margin: var(--space-sm) auto;
+  margin: var(--space-sm) auto var(--space-md);
   border-radius: var(--radius-full);
   background: linear-gradient(
     90deg,
@@ -42,7 +41,7 @@
   display: inline-flex;
   align-items: center;
   font-family: var(--font-display);
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -93,7 +92,7 @@
     var(--color-accent) 45%,
     var(--color-dark) 100%
   );
-  border-radius: var(--radius-lg);
+  border-radius: 2px;
   padding: var(--space-2xl) var(--space-xl);
   box-shadow: var(--shadow-lg);
 }

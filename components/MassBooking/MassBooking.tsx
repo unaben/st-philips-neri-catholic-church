@@ -11,9 +11,9 @@ export default function MassBooking() {
   return (
     <>
       <Hero title="Mass Booking" imgUrl="/images/mass-booking.webp"/>
+      <div className={styles.accentBar} aria-hidden="true" />
       <div className={styles.intro}>
-        <ContentWrap className={styles.introInner}>
-          <div className={styles.accentBar} aria-hidden="true" />
+        <ContentWrap className={styles.introInner}>          
           <div className={styles.rainbowBar} />
           <span className={styles.badge}>Mass Intentions</span>
           <h1 className={styles.title}>
