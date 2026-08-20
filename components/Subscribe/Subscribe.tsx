@@ -1,13 +1,16 @@
-"use client";
+'use client';
 
-import useSubscribe from "./hooks/useSubscribe";
-import styles from "./Subscribe.module.css";
+import Link from 'next/link';
+import useSubscribe from './hooks/useSubscribe';
+import styles from './Subscribe.module.css';
 
 export default function Subscribe() {
   const { email, status, errorMsg, handleEmailChange, handleSubmit } =
     useSubscribe();
 
-  if (status === "success") {
+  const isLoading = status === 'loading';
+
+  if (status === 'success') {
     return (
       <div className={styles.section} aria-label="Newsletter subscription">
         <div className={styles.inner}>
@@ -20,50 +23,54 @@ export default function Subscribe() {
     );
   }
 
-  const isLoading = status === "loading";
-
   return (
     <div className={styles.section} aria-label="Newsletter subscription">
       <div className={styles.inner}>
         <div className={styles.headingGroup}>
-          <h2 className={styles.heading}>
-            Stay connected with our parish family
-          </h2>
+          <h2 className={styles.heading}>Want to be kept in the loop?</h2>
           <p className={styles.subtext}>
-            Get news, upcoming events, and reflections from St. Philip Neri —
-            straight to your inbox.
+            Get parish news, upcoming events, and reflections delivered
+            straight to your inbox. No spam. Just the good stuff.
           </p>
         </div>
-        <div>
-          <form
-            className={styles.form}
-            onSubmit={handleSubmit}
-            noValidate
-            aria-label="Subscribe to newsletter"
-          >
-            <label htmlFor="subscribe-email" className="sr-only">
-              Email address
+
+        <form
+          className={styles.form}
+          onSubmit={handleSubmit}
+          noValidate
+          aria-label="Subscribe to newsletter"
+        >
+          <div className={styles.fieldGroup}>
+            <label htmlFor="subscribe-email" className={styles.label}>
+              Enter your email address
+              <span className={styles.required} aria-hidden="true">
+                *
+              </span>
             </label>
             <input
               id="subscribe-email"
               type="email"
               className={styles.input}
-              placeholder="Your email address"
+              placeholder="you@example.com"
               value={email}
               onChange={(e) => handleEmailChange(e.target.value)}
-              aria-describedby={errorMsg ? "subscribe-error" : undefined}
+              aria-describedby={errorMsg ? 'subscribe-error' : undefined}
               disabled={isLoading}
               required
             />
-            <button
-              type="submit"
-              className={styles.button}
-              disabled={isLoading}
-              aria-busy={isLoading}
-            >
-              {isLoading ? "SENDING…" : "SUBSCRIBE"}
-            </button>
-          </form>
+          </div>
+
+          <p className={styles.consent}>
+            By submitting your details, you accept and agree to our{' '}
+            <Link href="/about/privacy-policy" className={styles.consentLink}>
+              Privacy Policy
+            </Link>
+            .
+          </p>
+
+          <p className={styles.recaptchaNotice} aria-hidden="true">
+            🔒 Protected by reCAPTCHA
+          </p>
 
           {errorMsg && (
             <p
@@ -75,7 +82,16 @@ export default function Subscribe() {
               {errorMsg}
             </p>
           )}
-        </div>
+
+          <button
+            type="submit"
+            className={styles.button}
+            disabled={isLoading}
+            aria-busy={isLoading}
+          >
+            {isLoading ? 'SENDING…' : 'SUBSCRIBE'}
+          </button>
+        </form>
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ import type { VisitSectionProps } from "./VisitSection.types";
 import styles from "./VisitSection.module.css";
 
 export default function VisitSection(props: VisitSectionProps) {
-  const { heading = "Visit Us", address, officeHours, social } = props;
+  const { heading = "Visit Us", address, officeHours } = props;
 
   const phoneNumbers = address.tel
     .split("|")
@@ -16,7 +16,7 @@ export default function VisitSection(props: VisitSectionProps) {
         {heading}
       </h2>
 
-      {(address || officeHours || social) && (
+      {(address || officeHours) && (
         <div className={styles.visitGrid}>
           {address && (
             <div className={styles.visitCard}>
@@ -44,35 +44,11 @@ export default function VisitSection(props: VisitSectionProps) {
           {officeHours && (
             <div className={styles.visitCard}>
               <span className={styles.visitLabel}>Office Hours</span>
-              <p className={styles.visitValue}>{officeHours.label}</p>
+              <p className={styles.visitValue}>{officeHours.title}</p>
+              <p className={styles.visitValue}>{officeHours.time}</p>
               {officeHours.note && (
                 <p className={styles.visitNote}>{officeHours.note}</p>
               )}
-            </div>
-          )}
-          {social && (
-            <div className={styles.visitCard}>
-              <span className={styles.visitLabel}>Connect</span>
-              <div className={styles.socialLinks}>
-                {social.email && (
-                  <Link
-                    href={`mailto:${social.email}`}
-                    className={styles.visitLink}
-                  >
-                    {social.email}
-                  </Link>
-                )}
-                {social.facebook && (
-                  <span className={styles.socialText}>
-                    Facebook · {social.facebook}
-                  </span>
-                )}
-                {social.twitter && (
-                  <span className={styles.socialText}>
-                    Twitter · {social.twitter}
-                  </span>
-                )}
-              </div>
             </div>
           )}
         </div>

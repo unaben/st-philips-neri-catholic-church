@@ -1,18 +1,11 @@
-import type {
-  HeroSlide,
-  QuickLink,
-  FeaturedItem,
-  BlogPost,
-  FooterQuickLink,
-  SocialLink,
-} from "@/types";
+import type { Slide, QuickLink, FeaturedItem, FooterQuickLink } from "@/types";
 
 export const donateLink = {
   label: "Donate",
   href: "https://donate.mydona.com/st-philip-neri-catholic-church",
 } as const;
 
-export const heroSlides: HeroSlide[] = [
+export const heroSlides: Slide[] = [
   {
     id: 1,
     src: "/images/parish_view.webp",
@@ -30,6 +23,37 @@ export const heroSlides: HeroSlide[] = [
     heading: "A COMMUNITY UNITED IN FAITH AND LOVE",
     ctaLabel: "JOIN US",
     ctaHref: "/mass-times",
+  },
+];
+
+export const hallSlides: Slide[] = [
+  {
+    id: 1,
+    src: "/images/hall1.webp",
+    alt: "Interior of St. Philip Neri Catholic Church hall setup for an event",
+    tagline: "WELCOME TO OUR HALL",
+    heading: "A PERFECT VENUE FOR YOUR SPECIAL EVENTS",
+  },
+  {
+    id: 2,
+    src: "/images/hall2.webp",
+    alt: "Spacious seating arrangement in St. Philip Neri Catholic Church hall",
+    tagline: "GATHER & CELEBRATE",
+    heading: "HOST YOUR MEMORABLE MOMENTS WITH US",
+  },
+  {
+    id: 3,
+    src: "/images/hall3.webp",
+    alt: "Decorated stage area in St. Philip Neri Catholic Church hall",
+    tagline: "COMFORT & ELEGANCE",
+    heading: "DESIGNED TO ACCOMMODATE EVERY OCCASION",
+  },
+  {
+    id: 4,
+    src: "/images/hall4.webp",
+    alt: "Atmospheric lighting inside St. Philip Neri Catholic Church hall",
+    tagline: "COMMUNITY & FELLOWSHIP",
+    heading: "A WARM AND WELCOMING SPACE FOR ALL",
   },
 ];
 
@@ -93,19 +117,6 @@ export const featuredItems: FeaturedItem[] = [
   },
 ];
 
-export const blogPosts: BlogPost[] = [
-  {
-    id: 1,
-    title: "HOW TO TRULY TRUST SOMEONE",
-    excerpt:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui faucibus in ornare quam viverra orci sagittis eu volutpat.",
-    image: "/images/blog-bible.jpg",
-    imageAlt: "Open Bible on lectern with candles",
-    href: "/news-and-events/blog/how-to-truly-trust-someone",
-    date: "2024-04-10",
-  },
-];
-
 export const footerQuickLinks: FooterQuickLink[] = [
   { label: "ABOUT US", href: "/about/about-us" },
   { label: "BEING CATHOLIC", href: "/sacramental/become-a-catholic" },
@@ -113,16 +124,7 @@ export const footerQuickLinks: FooterQuickLink[] = [
   { label: "LEGION OF MARY", href: "/parish-groups/legion-of-mary" },
   { label: "EVENT", href: "/news-and-events/events" },
   { label: "ANNOUNCEMENT", href: "/news-and-events/announcements" },
-  { label: "BLOG", href: "/news-and-events/blog" },
   { label: "MASS BOOKING", href: "/about/mass-booking" },
-];
-
-export const socialLinks: SocialLink[] = [
-  {
-    platform: "Facebook",
-    href: "https://facebook.com",
-    ariaLabel: "Visit our Facebook page",
-  },
 ];
 
 export const churchInfo = {

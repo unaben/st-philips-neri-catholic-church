@@ -1,15 +1,4 @@
-.accentBar {
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(
-      to right,
-      var(--color-accent-tint),
-      var(--color-accent),
-      var(--color-accent-tint)
-    );
-  }
-
-  .intro {
+ .intro {
     background: var(--color-bg);
     padding-bottom: var(--space-2xl);
     text-align: center;
@@ -25,7 +14,7 @@
   .rainbowBar {
     height: 5px;
     width: 120px;
-    margin: var(--space-lg) auto var(--space-sm);
+    margin: var(--space-sm) auto var(--space-md);
     border-radius: var(--radius-full);
     background: linear-gradient(
       90deg,
@@ -41,7 +30,7 @@
     display: inline-flex;
     align-items: center;
     font-family: var(--font-display);
-    font-size: 0.75rem;
+    font-size: 1rem;
     font-weight: 700;
     letter-spacing: 0.14em;
     text-transform: uppercase;

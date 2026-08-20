@@ -6,14 +6,14 @@ export interface NavLink {
   children?: NavLink[];
 }
 
-export interface HeroSlide {
+export interface Slide {
   id: number;
   src: string;
   alt: string;
   tagline: string;
   heading: string;
-  ctaLabel: string;
-  ctaHref: string;
+  ctaLabel?: string;
+  ctaHref?: string;
 }
 
 export interface QuickLink {
@@ -30,16 +30,6 @@ export interface FeaturedItem {
   href: string;
 }
 
-export interface BlogPost {
-  id: number;
-  title: string;
-  excerpt: string;
-  image: string;
-  imageAlt: string;
-  href: string;
-  date: string;
-}
-
 export interface ParishHall {
   image: string;
   imageAlt: string;
@@ -54,10 +44,4 @@ export interface ParishHall {
 export interface FooterQuickLink {
   label: string;
   href: string;
-}
-
-export interface SocialLink {
-  platform: string;
-  href: string;
-  ariaLabel: string;
 }
