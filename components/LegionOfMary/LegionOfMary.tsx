@@ -14,9 +14,9 @@ export default function LegionOfMary() {
   return (
     <>
       <Hero title="Legion of Mary" imgUrl="/images/virgin-mary.webp"/>
+      <div className={styles.accentBar} aria-hidden="true" />
       <div className={styles.intro}>
-        <ContentWrap className={styles.introInner}>
-          <div className={styles.accentBar} aria-hidden="true" />
+        <ContentWrap className={styles.introInner}>          
           <div className={styles.rainbowBar} />
           <span className={styles.badge}>Marian Apostolate</span>
           <h1 className={styles.title}>

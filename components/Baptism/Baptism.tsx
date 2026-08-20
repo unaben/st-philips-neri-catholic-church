@@ -8,9 +8,9 @@ export default function Baptism() {
   return (
     <>
       <Hero title="Baptism" imgUrl="/images/baptism.webp" />
+      <div className={styles.accentBar} aria-hidden="true" />
       <div className={styles.intro}>
-        <ContentWrap className={styles.introInner}>
-          <div className={styles.accentBar} aria-hidden="true" />
+        <ContentWrap className={styles.introInner}>         
           <div className={styles.rainbowBar} />
           <span className={styles.badge}>Sacrament of Initiation</span>
           <h1 className={styles.title}>

@@ -12,9 +12,9 @@ export default function CcpPage() {
         title="Certificate of Catholic Practice"
         imgUrl="/images/bible_and_rosary.webp"
       />
+      <div className={styles.accentBar} aria-hidden="true" />
       <div className={styles.intro}>
         <ContentWrap className={styles.introInner}>
-          <div className={styles.accentBar} aria-hidden="true" />
           <div className={styles.rainbowBar} />
           <span className={styles.badge}>Catholic School Applications</span>
           <h1 className={styles.title}>
@@ -31,7 +31,6 @@ export default function CcpPage() {
           </p>
         </ContentWrap>
       </div>
-
       <ContentWrap as="section" className={styles.section}>
         <h2 className={styles.sectionHeading}>Before You Apply</h2>
         <p className={styles.sectionIntro}>
@@ -76,7 +75,6 @@ export default function CcpPage() {
           </div>
         </ContentWrap>
       </div>
-
       <ContentWrap as="section" className={styles.section}>
         <h2 className={styles.sectionHeading}>
           Contact the Priest for an Appointment
@@ -104,7 +102,6 @@ export default function CcpPage() {
           ))}
         </div>
       </ContentWrap>
-
       <ContentWrap as="section" className={styles.section}>
         <h2 className={styles.sectionHeading}>Common Questions</h2>
         <div className={styles.faqList}>

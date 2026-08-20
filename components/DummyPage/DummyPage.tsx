@@ -12,8 +12,8 @@ async function DummyPage({ title, imgUrl }: DummyPageProps) {
   return (
     <>
       <Hero title={title} imgUrl={imgUrl} />
-      <ContentWrap as="div" className={styles.body}>
-        <div className={styles.accentBar} aria-hidden="true" />
+      <div className={styles.accentBar} aria-hidden="true" />
+      <ContentWrap as="div" className={styles.body}>        
         <div className={styles.rainbowBar} />
         <span className={styles.rainbowBarBadge}>{title}</span>
         <ContentWrap className={styles.bodyInner}>

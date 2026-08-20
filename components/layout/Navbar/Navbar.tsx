@@ -156,9 +156,9 @@ export default function Navbar() {
             <span className={styles.logoText}>
               St. Philip Neri
               <br />
-              Catholic
+              Catholic Church
               <br />
-              Church
+              Smethwick
             </span>
           </Link>
           <nav className={styles.nav} aria-label="Main navigation">

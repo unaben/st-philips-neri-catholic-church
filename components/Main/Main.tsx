@@ -17,7 +17,6 @@ export default function MainSection(props: MainSectionProps) {
     privacyPolicyUrl,
     address,
     officeHours,
-    social,
   } = props;
 
   return (
@@ -25,7 +24,6 @@ export default function MainSection(props: MainSectionProps) {
       <div className={styles.accentBar} aria-hidden="true" />
       <div className={styles.intro}>
         <ContentWrap className={styles.introInner}>
-          <div className={styles.accentBar} aria-hidden="true" />
           <div className={styles.rainbowBar} />
           <span className={styles.badge}>Archdiocese of Birmingham</span>
           <h1 className={styles.title}>
@@ -33,29 +31,8 @@ export default function MainSection(props: MainSectionProps) {
             <span className={styles.titleUnderline} aria-hidden="true" />
           </h1>
           {tagline && <p className={styles.leadText}>{tagline}</p>}
-
-          <div className={styles.streamingBox}>
-            <span className={styles.streamingIcon} aria-hidden="true">
-              📡
-            </span>
-            <div>
-              <strong>Diocesan parishes live streaming Masses</strong>
-              <p>
-                Several parishes within Westminster Diocese are streaming
-                weekend and weekday Masses.{" "}
-                <Link
-                  href="https://rcdow.org.uk"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Mass streaming and useful websites
-                </Link>
-              </p>
-            </div>
-          </div>
         </ContentWrap>
       </div>
-
       <ContentWrap className={styles.body}>
         <section aria-labelledby="priests-heading">
           <h2 id="priests-heading" className={styles.sectionHeading}>
@@ -125,7 +102,6 @@ export default function MainSection(props: MainSectionProps) {
         <VisitSection
           address={address}
           officeHours={officeHours}
-          social={social}
         />
 
         <div className={styles.ctaRow}>
@@ -137,7 +113,7 @@ export default function MainSection(props: MainSectionProps) {
           >
             Support Our Parish
           </Link>
-          <Link href="/subscribe" className={styles.btnSecondary}>
+          <Link href="/about/subscribe" className={styles.btnSecondary}>
             Get Parish Updates
           </Link>
         </div>

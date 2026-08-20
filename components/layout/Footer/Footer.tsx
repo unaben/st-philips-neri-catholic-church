@@ -2,10 +2,8 @@
 
 import Link from "next/link";
 import { useParallax } from "@/hooks/useParallax";
-import { churchInfo, footerQuickLinks, socialLinks } from "@/data";
+import { churchInfo, footerQuickLinks } from "@/data";
 import { ChurchCrest } from "@/components/Icons/ChurchCrest";
-import FacebookIcon from "@/components/Icons/FacebookIcon";
-import { ArchdioceseBadge } from "@/components/Icons/ArchdioceseBadge";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
@@ -76,25 +74,6 @@ export default function Footer() {
               ))}
             </ul>
           </nav>
-        </div>
-        <div className={styles.section}>
-          <h3 className={styles.sectionTitle}>Connect</h3>
-          <ul className={styles.socialList}>
-            {socialLinks.map((social) => (
-              <li key={social.platform}>
-                <a
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.socialLink}
-                  aria-label={social.ariaLabel}
-                >
-                  <FacebookIcon />
-                </a>
-              </li>
-            ))}
-          </ul>
-          <ArchdioceseBadge />
         </div>
         <div className={styles.donateCol}>
           <p className={styles.donateHeading}>

@@ -10,10 +10,6 @@ function formatDate(iso: string): string {
   });
 }
 
-/**
- * Renders a single announcement. `richTextHtml` is sanitised server-side
- * (see lib/sanitize.ts) before it's ever stored, so it's safe to render here.
- */
 export function AnnouncementCard({
   announcement,
   variant = "display",

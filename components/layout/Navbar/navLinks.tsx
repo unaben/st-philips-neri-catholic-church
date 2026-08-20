@@ -4,12 +4,9 @@ import {
   MassBookingIcon,
   SafeguardingIcon,
   CertificateIcon,
-  StreamedMassesIcon,
   SubscribeIcon,
   AnnouncementsIcon,
-  BlogIcon,
   EventsIcon,
-  NewsIcon,
   LegionOfMaryIcon,
   CrossIcon,
   ChoirIcon,
@@ -20,7 +17,7 @@ import {
   MarriageIcon,
   AboutUsIcon,
 } from "@/components/Icons";
-import { NavLink } from "@/types";
+import type { NavLink } from "@/types";
 
 export const navLinks: NavLink[] = [
   {
@@ -39,6 +36,11 @@ export const navLinks: NavLink[] = [
         icon: <ContactUsIcon />,
       },
       {
+        label: "Hall Rentals",
+        href: "/about/hall-rentals",
+        icon: <MassBookingIcon />,
+      },
+      {
         label: "How do I register in the Parish?",
         href: "/about/register",
         icon: <RegisterIcon />,
@@ -46,6 +48,11 @@ export const navLinks: NavLink[] = [
       {
         label: "Mass Booking",
         href: "/about/mass-booking",
+        icon: <MassBookingIcon />,
+      },
+      {
+        label: "Privacy Policy",
+        href: "/about/privacy-policy",
         icon: <MassBookingIcon />,
       },
       {
@@ -58,11 +65,6 @@ export const navLinks: NavLink[] = [
           "Signing of the certificate of Catholic Practice (CCP) for Catholic schools",
         href: "/about/Signing-schools-certificate",
         icon: <CertificateIcon />,
-      },
-      {
-        label: "Streamed Masses across the Diocese",
-        href: "/about/streamed-masses-across-the-diocese",
-        icon: <StreamedMassesIcon />,
       },
       {
         label: "Subscribe",
@@ -83,19 +85,9 @@ export const navLinks: NavLink[] = [
         icon: <AnnouncementsIcon />,
       },
       {
-        label: "Blog",
-        href: "/news-and-events/blog",
-        icon: <BlogIcon />,
-      },
-      {
         label: "Events",
         href: "/news-and-events/events",
         icon: <EventsIcon />,
-      },
-      {
-        label: "News",
-        href: "/news-and-events/news",
-        icon: <NewsIcon />,
       },
     ],
   },
@@ -110,13 +102,18 @@ export const navLinks: NavLink[] = [
         icon: <LegionOfMaryIcon />,
       },
       {
-        label: "Mass servers",
-        href: "/parish-groups/mass-server",
+        label: "Alter servers",
+        href: "/parish-groups/alter-server",
         icon: <CrossIcon />,
       },
       {
         label: "Our choir",
         href: "/parish-groups/choir",
+        icon: <ChoirIcon />,
+      },
+      {
+        label: "Youth group",
+        href: "/parish-groups/youth-group",
         icon: <ChoirIcon />,
       },
     ],

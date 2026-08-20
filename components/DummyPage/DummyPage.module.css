@@ -11,14 +11,14 @@
 
 .body {
   background-color: var(--color-bg);
-  padding-top: var(--space-3xl);
+  padding-top: var(--space-2xl);
   padding-bottom: var(--space-3xl);
 }
 
 .rainbowBar {
   height: 5px;
   width: 120px;
-  margin: var(--space-lg) auto;
+  margin: var(--space-sm) auto var(--space-lg);
   border-radius: var(--radius-full);
   background: linear-gradient(
     90deg,
@@ -63,7 +63,7 @@
   background: var(--color-peach);
   color: var(--color-gold);
   font-family: var(--font-display);
-  font-size: 0.78rem;
+  font-size: 1rem;
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
